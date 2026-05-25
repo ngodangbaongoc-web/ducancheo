@@ -40,15 +40,15 @@ export function SectionHeader({ eyebrow, title, subtitle }) {
           whileInView={{ width: 32 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="h-px bg-gradient-to-r from-red-500 to-amber-400"
+          className="h-px bg-gradient-to-r from-[#d0d09d] to-[#d0d09d]/40"
         />
-        <span className="text-amber-400">{eyebrow}</span>
+        <span style={{ color: '#d0d09d' }}>{eyebrow}</span>
         <motion.div
           initial={{ width: 0 }}
           whileInView={{ width: 32 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="h-px bg-gradient-to-l from-red-500 to-amber-400"
+          className="h-px bg-gradient-to-l from-[#d0d09d] to-[#d0d09d]/40"
         />
       </div>
       <h2 className="text-4xl md:text-5xl font-black text-white mb-4 tracking-tight">{title}</h2>
@@ -72,7 +72,7 @@ export function GlassCard({ children, className = '', glowColor = 'rgba(220,38,3
 }
 
 /** Stat number that counts up */
-export function StatBadge({ value, label, color = 'text-amber-400', icon: Icon }) {
+export function StatBadge({ value, label, color = 'text-[#d0d09d]', icon: Icon }) {
   return (
     <div className="flex flex-col items-center text-center p-4">
       {Icon && <Icon size={18} className={`mb-2 ${color}`} />}

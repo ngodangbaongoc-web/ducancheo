@@ -6,7 +6,7 @@ import { SectionHeader, Reveal } from './ui'
 const personas = [
   {
     name: 'Bác Minh', age: 65, role: 'Cựu chiến binh • Nghỉ hưu',
-    Icon: UserCheck, color: '#F59E0B', location: 'Ngoại thành Hà Nội', segment: 'Truyền thống',
+    Icon: UserCheck, color: '#d0d09d', location: 'Ngoại thành Hà Nội', segment: 'Truyền thống',
     quote: '"Tôi yêu những điệu chèo nguyên bản mà tôi đã nghe từ thuở thơ ấu tại quê nhà."',
     channels: [{ icon: Tv, label: 'VTV1' }, { icon: Radio, label: 'VOV' }, { icon: Tv, label: 'QPVN' }],
     habits: ['Xem trực tiếp tại sân đình', 'Xem tại rạp hát chính quy', 'Tivi buổi tối thường xuyên'],
@@ -45,7 +45,7 @@ export default function Personas() {
 
   return (
     <section id="personas" className="py-28 px-6 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zinc-950/50 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#1a2b23]/50 to-transparent pointer-events-none" />
       <div className="max-w-7xl mx-auto relative">
         <SectionHeader
           eyebrow="Audience Personas"

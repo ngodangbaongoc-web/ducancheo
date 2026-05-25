@@ -15,7 +15,7 @@ const strategies = [
     kpis: ['100K+ streams trên nền tảng nhạc số', '10K+ followers TikTok trong 6 tháng', '50+ video Shorts mỗi tháng'],
   },
   {
-    id: 'influencer', num: '02', Icon: Star, color: '#F59E0B', border: 'border-amber-500/20', bg: 'from-amber-950/30',
+    id: 'influencer', num: '02', Icon: Star, color: '#d0d09d', border: 'border-[#d0d09d]/20', bg: 'from-[#d0d09d]/8',
     title: 'Kích hoạt "Hiệu ứng Người ảnh hưởng"', sub: 'Influencer Marketing Strategy',
     desc: 'Sử dụng thương hiệu cá nhân NSND Vũ Tự Long làm đòn bẩy thu hút giới trẻ đến với nghệ thuật truyền thống.',
     actions: [
@@ -41,7 +41,7 @@ const funnelSteps = [
   { step: 'INTEREST',  label: 'Quan tâm',  desc: 'Video hậu trường, challenge duet, clip nghệ sĩ', color: '#8B5CF6' },
   { step: 'DESIRE',    label: 'Khao khát', desc: 'Workshop mini, nội dung giải nghĩa chèo cổ', color: '#EF4444' },
   { step: 'ACTION',    label: 'Hành động', desc: 'Đặt vé online, mua vé workshop, chia sẻ', color: '#10B981' },
-  { step: 'ADVOCACY',  label: 'Lan tỏa',   desc: 'Check-in, tag bạn bè, tạo UGC tự nhiên', color: '#F59E0B' },
+  { step: 'ADVOCACY',  label: 'Lan tỏa',   desc: 'Check-in, tag bạn bè, tạo UGC tự nhiên', color: '#d0d09d' },
 ]
 
 export default function OmnichannelStrategy() {
@@ -50,7 +50,7 @@ export default function OmnichannelStrategy() {
 
   return (
     <section id="strategy" className="py-28 px-6 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zinc-950/50 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#1a2b23]/50 to-transparent pointer-events-none" />
       <div className="max-w-7xl mx-auto relative">
         <SectionHeader
           eyebrow="Chiến lược Đa kênh"

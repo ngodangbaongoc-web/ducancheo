@@ -17,7 +17,7 @@ function AnimatedNumber({ target, suffix = '' }) {
 }
 
 const stats = [
-  { icon: Award,      label: 'NSND (Tổng)', value: 9,   color: 'text-amber-400', glow: 'rgba(245,158,11,0.12)', border: 'border-amber-500/20' },
+  { icon: Award,      label: 'NSND (Tổng)', value: 9,   color: 'text-[#d0d09d]', glow: 'rgba(208,208,157,0.12)', border: 'border-[#d0d09d]/20' },
   { icon: Star,       label: 'NSƯT (Tổng)', value: 27,  color: 'text-yellow-400', glow: 'rgba(234,179,8,0.12)', border: 'border-yellow-500/20' },
   { icon: Award,      label: 'NSND đương nhiệm', value: 5,  color: 'text-red-400', glow: 'rgba(239,68,68,0.12)', border: 'border-red-500/20' },
   { icon: Mic2,       label: 'NSƯT đương nhiệm', value: 15, color: 'text-violet-400', glow: 'rgba(139,92,246,0.12)', border: 'border-violet-500/20' },
@@ -26,13 +26,13 @@ const stats = [
 ]
 
 const radialData = [
-  { name: 'NSND', value: 9, fill: '#F59E0B' },
+  { name: 'NSND', value: 9, fill: '#d0d09d' },
   { name: 'NSƯT', value: 27, fill: '#8B5CF6' },
   { name: 'Buổi diễn', value: 142, fill: '#10B981' },
 ]
 
 const milestones = [
-  { year: '2010', event: 'Nâng cấp & phục dựng', detail: 'Hơn 20 chương trình & vở diễn lớn', color: 'bg-amber-500' },
+  { year: '2010', event: 'Nâng cấp & phục dựng', detail: 'Hơn 20 chương trình & vở diễn lớn', color: 'bg-[#d0d09d]' },
   { year: '2024', event: 'NSND Vũ Tự Long', detail: 'Bổ nhiệm Giám đốc (tháng 12/2024)', color: 'bg-red-500' },
   { year: '2025', event: 'Liên hoan QT Thử nghiệm', detail: 'Giải Dàn nhạc xuất sắc + 4 giải cá nhân', color: 'bg-emerald-500' },
   { year: '2025', event: 'Vở "Chuyện làng"', detail: 'Tác phẩm đương đại mang tính thời sự', color: 'bg-violet-500' },
@@ -51,7 +51,7 @@ const CustomTooltip = ({ active, payload }) => {
 export default function TheaterStats() {
   return (
     <section id="stats" className="py-28 px-6 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zinc-950/50 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#1a2b23]/50 to-transparent pointer-events-none" />
       <div className="max-w-7xl mx-auto relative">
         <SectionHeader
           eyebrow="Thống kê nhà hát"
@@ -91,7 +91,7 @@ export default function TheaterStats() {
           <Reveal>
             <div className="glass rounded-2xl p-8 h-full">
               <div className="flex items-center gap-2 mb-1">
-                <Trophy size={18} className="text-amber-400" />
+                <Trophy size={18} style={{ color: '#d0d09d' }} />
                 <h3 className="text-white font-bold text-lg">Phân bổ Danh hiệu Nghệ sĩ</h3>
               </div>
               <p className="text-zinc-500 text-sm mb-6">So sánh tổng thể vs đương nhiệm</p>
@@ -105,7 +105,7 @@ export default function TheaterStats() {
                 </ResponsiveContainer>
                 <div className="space-y-4 min-w-[130px]">
                   {[
-                    { color: '#F59E0B', label: 'NSND', val: '9 tổng / 5 hiện tại' },
+                    { color: '#d0d09d', label: 'NSND', val: '9 tổng / 5 hiện tại' },
                     { color: '#8B5CF6', label: 'NSƯT', val: '27 tổng / 15 hiện tại' },
                     { color: '#10B981', label: 'Buổi diễn', val: '142 (đến T9/2025)' },
                   ].map(item => (
@@ -142,7 +142,7 @@ export default function TheaterStats() {
                       transition={{ delay: i * 0.1 }}
                       className="flex items-start gap-4"
                     >
-                      <div className="text-amber-400 font-black text-sm w-10 text-right shrink-0 pt-0.5">{m.year}</div>
+                      <div className="font-black text-sm w-10 text-right shrink-0 pt-0.5" style={{ color: '#d0d09d' }}>{m.year}</div>
                       <div className="relative z-10 shrink-0 mt-1.5">
                         <div className={`w-3 h-3 rounded-full ${m.color}`} />
                         <div className={`absolute inset-0 rounded-full ${m.color} opacity-30 ping-slow`} />

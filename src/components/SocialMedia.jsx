@@ -18,7 +18,7 @@ const typeStyle = {
   artist:      { color: '#8B5CF6', label: 'Nghệ sĩ', bg: 'bg-violet-500/15' },
   recruitment: { color: '#3B82F6', label: 'Tuyển sinh', bg: 'bg-blue-500/15' },
   announcement:{ color: '#71717A', label: 'Thông báo', bg: 'bg-zinc-500/15' },
-  conversion:  { color: '#F59E0B', label: 'Chuyển đổi', bg: 'bg-amber-500/15' },
+  conversion:  { color: '#d0d09d', label: 'Chuyển đổi', bg: 'bg-[#d0d09d]/15' },
 }
 
 const chartData = posts.map(p => ({
@@ -30,7 +30,7 @@ const CustomTooltip = ({ active, payload }) => {
   if (!active || !payload?.length) return null
   return (
     <div className="glass rounded-xl px-4 py-3 text-sm text-white border border-white/12 max-w-[260px]">
-      <div className="font-bold text-amber-400 mb-1.5 text-xs">{payload[0]?.payload?.fullName}</div>
+      <div className="font-bold mb-1.5 text-xs" style={{ color: '#d0d09d' }}>{payload[0]?.payload?.fullName}</div>
       {payload.map(p => (
         <div key={p.dataKey} className="flex justify-between gap-6 text-xs">
           <span style={{ color: p.fill }}>{p.name}</span>
@@ -62,7 +62,7 @@ export default function SocialMedia() {
               <YAxis tick={{ fill: '#52525B', fontSize: 11 }} />
               <Tooltip content={<CustomTooltip />} />
               <Legend wrapperStyle={{ color: '#A1A1AA', paddingTop: 16 }} />
-              <Bar name="Reactions" dataKey="reactions" fill="#F59E0B" radius={[4,4,0,0]} />
+              <Bar name="Reactions" dataKey="reactions" fill="#d0d09d" radius={[4,4,0,0]} />
               <Bar name="Comments"  dataKey="comments"  fill="#3B82F6" radius={[4,4,0,0]} />
               <Bar name="Shares"    dataKey="shares"    fill="#10B981" radius={[4,4,0,0]} />
             </BarChart>
@@ -135,10 +135,10 @@ export default function SocialMedia() {
             </div>
           </Reveal>
           <Reveal delay={0.1}>
-            <div className="rounded-2xl p-7 bg-gradient-to-br from-amber-950/40 to-transparent border border-amber-500/20 h-full">
+            <div className="rounded-2xl p-7 bg-gradient-to-br from-[#d0d09d]/8 to-transparent border border-[#d0d09d]/20 h-full">
               <div className="flex items-center gap-2 mb-3">
-                <Star size={20} className="text-amber-400" />
-                <h4 className="text-amber-400 font-bold text-base">Hiệu ứng NSND Vũ Tự Long</h4>
+                <Star size={20} style={{ color: '#d0d09d' }} />
+                <h4 className="font-bold text-base" style={{ color: '#d0d09d' }}>Hiệu ứng NSND Vũ Tự Long</h4>
               </div>
               <p className="text-zinc-400 text-sm leading-relaxed">
                 Từ sân khấu chèo đến gameshow{' '}

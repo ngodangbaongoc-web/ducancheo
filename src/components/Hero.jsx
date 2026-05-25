@@ -8,11 +8,11 @@ const particles = Array.from({ length: 18 }, (_, i) => ({
   left: Math.random() * 100,
   delay: Math.random() * 8,
   duration: Math.random() * 10 + 12,
-  color: i % 3 === 0 ? '#EF4444' : i % 3 === 1 ? '#F59E0B' : '#8B5CF6',
+  color: i % 3 === 0 ? '#d0d09d' : i % 3 === 1 ? '#d0d09d' : '#a0c4a8',
 }))
 
 const stats = [
-  { icon: Calendar, num: '142', label: 'Buổi diễn 2025', sub: 'Vượt 20% KH', color: 'text-amber-400' },
+  { icon: Calendar, num: '142', label: 'Buổi diễn 2025', sub: 'Vượt 20% KH', color: 'text-[#d0d09d]' },
   { icon: Search,   num: '50K', label: 'Lượt tìm kiếm', sub: '"hát chèo"/tháng', color: 'text-red-400' },
   { icon: TrendingUp, num: '4.9K', label: 'Reactions cao nhất', sub: 'Facebook post', color: 'text-violet-400' },
   { icon: Users,    num: '3',   label: 'Nhóm khán giả', sub: 'Phân khúc cốt lõi', color: 'text-emerald-400' },
@@ -49,25 +49,14 @@ export default function Hero() {
 
       {/* Center orbs */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] pointer-events-none">
-        <div className="absolute inset-0 rounded-full border border-red-500/10" />
-        <div className="absolute inset-[60px] rounded-full border border-amber-500/10" />
-        <div className="absolute inset-[120px] rounded-full border border-violet-500/10" />
-        <div className="absolute inset-[180px] rounded-full bg-red-500/5 rounded-full" />
+        <div className="absolute inset-0 rounded-full border border-[#d0d09d]/10" />
+        <div className="absolute inset-[60px] rounded-full border border-[#d0d09d]/8" />
+        <div className="absolute inset-[120px] rounded-full border border-[#a0c4a8]/10" />
+        <div className="absolute inset-[180px] rounded-full bg-[#d0d09d]/4 rounded-full" />
       </div>
 
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6 pt-24">
         {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="inline-flex items-center gap-2.5 bg-white/5 border border-white/12 rounded-full px-5 py-2 mb-8 text-xs font-medium text-zinc-300 backdrop-blur-sm"
-        >
-          <Sparkles size={12} className="text-amber-400" />
-          Nghiên cứu khoa học • 2025–2026
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-        </motion.div>
-
         {/* Title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -126,7 +115,8 @@ export default function Hero() {
         >
           <a
             href="#context"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white font-semibold px-8 py-3.5 rounded-xl transition-all glow-red text-sm shadow-lg shadow-red-900/30"
+            className="inline-flex items-center gap-2 font-semibold px-8 py-3.5 rounded-xl transition-all text-sm shadow-lg"
+            style={{ background: '#d0d09d', color: '#22372f', boxShadow: '0 8px 24px rgba(208,208,157,0.25)' }}
           >
             Khám phá nghiên cứu
             <ArrowDown size={16} />

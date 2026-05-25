@@ -22,7 +22,7 @@ const keywords = [
   { kw: 'chèo quân đội',           vol: 50,    yoy: 0,    trend: 'stable' },
 ]
 
-const colors = { stable: '#F59E0B', up: '#3B82F6', down: '#EF4444', explosive: '#10B981' }
+const colors = { stable: '#d0d09d', up: '#3B82F6', down: '#EF4444', explosive: '#10B981' }
 
 const chartData = keywords.slice(0, 10).map(k => ({
   name: k.kw.length > 20 ? k.kw.slice(0, 20) + '…' : k.kw,
@@ -30,23 +30,23 @@ const chartData = keywords.slice(0, 10).map(k => ({
 }))
 
 const wordCloudWords = [
-  { text: 'hát chèo', size: 46, color: '#F59E0B' },
+  { text: 'hát chèo', size: 46, color: '#d0d09d' },
   { text: 'chèo quân đội', size: 34, color: '#EF4444' },
-  { text: 'dân ca chèo', size: 28, color: '#F59E0B' },
+  { text: 'dân ca chèo', size: 28, color: '#d0d09d' },
   { text: 'nhà hát', size: 26, color: '#8B5CF6' },
   { text: 'đào liễu', size: 22, color: '#3B82F6' },
   { text: 'karaoke chèo', size: 20, color: '#10B981' },
   { text: 'mp3 chèo', size: 19, color: '#10B981' },
-  { text: 'chèo văn', size: 18, color: '#F59E0B' },
+  { text: 'chèo văn', size: 18, color: '#d0d09d' },
   { text: 'dân ca cổ', size: 16, color: '#71717A' },
   { text: 'quan họ', size: 16, color: '#3B82F6' },
-  { text: 'chèo cổ', size: 22, color: '#F59E0B' },
+  { text: 'chèo cổ', size: 22, color: '#d0d09d' },
   { text: 'NSND Tự Long', size: 24, color: '#EF4444' },
   { text: 'lưu diễn', size: 14, color: '#71717A' },
   { text: 'quốc phòng', size: 15, color: '#10B981' },
-  { text: 'chèo quê', size: 14, color: '#F59E0B' },
+  { text: 'chèo quê', size: 14, color: '#d0d09d' },
   { text: 'làn điệu', size: 17, color: '#8B5CF6' },
-  { text: 'hề chèo', size: 15, color: '#F59E0B' },
+  { text: 'hề chèo', size: 15, color: '#d0d09d' },
   { text: 'chiếu chèo', size: 14, color: '#71717A' },
 ]
 
@@ -70,14 +70,14 @@ const CustomTooltip = ({ active, payload }) => {
   if (!active || !payload?.length) return null
   return (
     <div className="glass rounded-xl px-4 py-3 text-sm text-white border border-white/12 max-w-[220px]">
-      <div className="font-bold text-amber-400 mb-1 text-xs">{payload[0].payload.fullName}</div>
+      <div className="font-bold mb-1 text-xs" style={{ color: '#d0d09d' }}>{payload[0].payload.fullName}</div>
       <div>Lượt tìm kiếm: <strong>{payload[0].value.toLocaleString()}/tháng</strong></div>
     </div>
   )
 }
 
 const insights = [
-  { icon: Search, title: 'Dịch chuyển tìm kiếm', color: 'text-amber-400', bg: 'from-amber-950/30', border: 'border-amber-500/15',
+  { icon: Search, title: 'Dịch chuyển tìm kiếm', color: 'text-[#d0d09d]', bg: 'from-[#d0d09d]/8', border: 'border-[#d0d09d]/15',
     text: '"hát chèo" giữ vững 50.000 lượt/tháng nhưng các từ khoá khái quát như "bài hát chèo" giảm -90% YoY. Khán giả tìm đến tác phẩm cụ thể, không còn tìm khái niệm chung.' },
   { icon: Mic, title: 'Bùng nổ nhu cầu cá nhân hóa', color: 'text-emerald-400', bg: 'from-emerald-950/30', border: 'border-emerald-500/15',
     text: '"cheo ka ra o ke" và "chèo hồng ngát mp3" tăng trưởng ∞ — công chúng muốn tự luyện tập và lưu trữ nhạc số chất lượng cao trên thiết bị cá nhân.' },
@@ -88,7 +88,7 @@ const insights = [
 export default function SearchData() {
   return (
     <section id="search" className="py-28 px-6 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zinc-950/60 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#1a2b23]/50 to-transparent pointer-events-none" />
       <div className="max-w-7xl mx-auto relative">
         <SectionHeader
           eyebrow="Social Listening"
@@ -106,7 +106,7 @@ export default function SearchData() {
                   <p className="text-zinc-500 text-sm">Top 10 từ khóa chủ đề chèo</p>
                 </div>
                 <div className="flex flex-col gap-1.5 text-xs">
-                  {[['#F59E0B','Ổn định'],['#3B82F6','+900% YoY'],['#10B981','Bùng nổ ∞'],['#EF4444','-90% YoY']].map(([c,l]) => (
+                  {[['#d0d09d','Ổn định'],['#3B82F6','+900% YoY'],['#10B981','Bùng nổ ∞'],['#EF4444','-90% YoY']].map(([c,l]) => (
                     <div key={l} className="flex items-center gap-2">
                       <div className="w-2.5 h-2.5 rounded-sm" style={{ background: c }} />
                       <span className="text-zinc-400">{l}</span>
@@ -187,7 +187,7 @@ export default function SearchData() {
         <Reveal>
           <div className="glass rounded-2xl overflow-hidden">
             <div className="px-6 py-4 border-b border-white/5 flex items-center gap-2">
-              <Search size={16} className="text-amber-400" />
+              <Search size={16} style={{ color: '#d0d09d' }} />
               <h3 className="text-white font-bold">Bảng dữ liệu đầy đủ — Google Keyword Stats</h3>
               <span className="ml-2 text-xs text-zinc-500">Nguồn: 01/03/2025 – 28/02/2026</span>
             </div>
@@ -211,7 +211,7 @@ export default function SearchData() {
                       className="border-b border-white/5 hover:bg-white/3 transition-colors"
                     >
                       <td className="px-6 py-3 text-white font-medium">{k.kw}</td>
-                      <td className="px-6 py-3 text-center text-amber-400 font-bold">{k.vol.toLocaleString()}</td>
+                      <td className="px-6 py-3 text-center font-bold" style={{ color: '#d0d09d' }}>{k.vol.toLocaleString()}</td>
                       <td className="px-6 py-3 text-center">
                         {k.yoy === null ? <span className="text-emerald-400 font-bold">∞</span>
                           : k.yoy > 0  ? <span className="text-blue-400">+{k.yoy}%</span>
@@ -223,7 +223,7 @@ export default function SearchData() {
                           k.trend === 'explosive' ? 'bg-emerald-500/15 text-emerald-400' :
                           k.trend === 'up'        ? 'bg-blue-500/15 text-blue-400' :
                           k.trend === 'down'      ? 'bg-red-500/15 text-red-400' :
-                                                    'bg-amber-500/15 text-amber-400'
+                                                    'bg-[#d0d09d]/15 text-[#d0d09d]'
                         }`}>
                           <TrendIcon trend={k.trend} />
                           {k.trend === 'explosive' ? 'Bùng nổ' : k.trend === 'up' ? 'Tăng mạnh' : k.trend === 'down' ? 'Giảm' : 'Ổn định'}

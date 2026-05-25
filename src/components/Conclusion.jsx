@@ -4,7 +4,7 @@ import { SectionHeader, Reveal, stagger, scaleIn } from './ui'
 
 const recommendations = [
   { Icon: Music2,    title: 'Số hóa tài nguyên âm nhạc',  color: '#3B82F6', border: 'border-blue-500/20',    bg: 'from-blue-950/30',    priority: '01', desc: 'Phát hành album mp3 chèo cổ + backing track karaoke trên Spotify, Zing MP3, YouTube — đáp ứng nhu cầu tìm kiếm tăng ∞.' },
-  { Icon: Smartphone, title: 'Tối ưu hóa điểm chạm số',   color: '#F59E0B', border: 'border-amber-500/20',   bg: 'from-amber-950/30',   priority: '02', desc: 'Kênh TikTok chính thức với micro-content 30-60s. Chiến dịch "Duet cùng NSND Tự Long" khai thác lượng follower khổng lồ.' },
+  { Icon: Smartphone, title: 'Tối ưu hóa điểm chạm số',   color: '#d0d09d', border: 'border-[#d0d09d]/20',   bg: 'from-[#d0d09d]/8',   priority: '02', desc: 'Kênh TikTok chính thức với micro-content 30-60s. Chiến dịch "Duet cùng NSND Tự Long" khai thác lượng follower khổng lồ.' },
   { Icon: Ticket,    title: 'Chuyển hóa O2O',              color: '#10B981', border: 'border-emerald-500/20', bg: 'from-emerald-950/30', priority: '03', desc: 'Tích hợp TicketGO/Ticketbox + workshop "Chiếu chèo mở" + không gian check-in vật lý để tạo vòng lặp lan tỏa tự nhiên.' },
 ]
 
@@ -24,7 +24,7 @@ export default function Conclusion() {
         {/* Main quote */}
         <Reveal className="mb-12">
           <div className="relative rounded-2xl overflow-hidden border border-white/10 p-8 md:p-10">
-            <div className="absolute inset-0 bg-gradient-to-br from-amber-500/6 via-transparent to-red-500/6" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#d0d09d]/6 via-transparent to-[#d0d09d]/3" />
             <div className="relative">
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-5 h-5 rounded-full bg-emerald-500/20 flex items-center justify-center">
@@ -34,7 +34,7 @@ export default function Conclusion() {
               </div>
               <p className="text-zinc-300 text-lg leading-relaxed mb-4">
                 Nghệ thuật chèo đang đối mặt với khủng hoảng cấu trúc, nhưng{' '}
-                <strong className="text-amber-400">dữ liệu Internet Listening chứng minh sự quan tâm của công chúng vẫn rất mạnh mẽ</strong>.
+                <strong style={{ color: '#d0d09d' }}>dữ liệu Internet Listening chứng minh sự quan tâm của công chúng vẫn rất mạnh mẽ</strong>.
                 Lối thoát không nằm ở cách tân hời hợt, mà nằm ở việc{' '}
                 <strong className="text-white">thay đổi tư duy tiếp cận khán giả</strong> —
                 từ thụ động sang chủ động, từ một chiều sang omnichannel.
@@ -91,7 +91,7 @@ export default function Conclusion() {
                 transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
                 className="inline-block mb-6"
               >
-                <div className="w-20 h-20 rounded-3xl bg-gradient-to-br from-red-600 to-amber-500 flex items-center justify-center mx-auto text-3xl font-black text-white shadow-2xl shadow-red-900/40">
+                <div className="w-20 h-20 rounded-3xl flex items-center justify-center mx-auto text-3xl font-black shadow-2xl" style={{ background: 'linear-gradient(135deg, #d0d09d, #22372f)', color: '#22372f', boxShadow: '0 24px 48px rgba(208,208,157,0.2)' }}>
                   戲
                 </div>
               </motion.div>

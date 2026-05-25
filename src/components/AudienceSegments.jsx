@@ -7,7 +7,7 @@ import { SectionHeader, Reveal, stagger, scaleIn } from './ui'
 const segments = [
   {
     id: 'traditional', label: 'Khán giả truyền thống', age: '50+ tuổi',
-    Icon: UserCheck, color: '#F59E0B', bg: 'from-amber-950/40 to-amber-900/10', border: 'border-amber-500/20',
+    Icon: UserCheck, color: '#d0d09d', bg: 'from-[#d0d09d]/8 to-[#d0d09d]/2', border: 'border-[#d0d09d]/20',
     demo: 'Đồng bằng Bắc Bộ, nông thôn, nghỉ hưu',
     motivation: 'Hoài niệm, bảo tồn lề lối chèo cổ nguyên bản',
     channels: [{ icon: Tv, label: 'VTV1, QPVN' }, { icon: Radio, label: 'VOV Radio' }],

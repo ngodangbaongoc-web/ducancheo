@@ -29,18 +29,18 @@ export default function NavBar() {
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-[#09090B]/90 backdrop-blur-xl border-b border-white/8 py-3'
+          ? 'bg-[#22372f]/95 backdrop-blur-xl border-b border-white/10 py-3'
           : 'bg-transparent py-5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-red-500 to-amber-500 flex items-center justify-center">
+          <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #d0d09d, #22372f)' }}>
             <Music2 size={16} className="text-white" />
           </div>
           <span className="font-black text-white text-sm tracking-tight">
-            Chèo<span className="text-amber-400">Quân Đội</span>
+            Nhà hát Chèo<span style={{ color: '#d0d09d' }}> Quân Đội</span>
           </span>
         </div>
 
@@ -73,7 +73,7 @@ export default function NavBar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden overflow-hidden bg-[#09090B]/98 border-t border-white/8"
+            className="md:hidden overflow-hidden bg-[#22372f]/98 border-t border-white/10"
           >
             <div className="px-6 py-4 space-y-1">
               {links.map(l => (

@@ -12,7 +12,7 @@ const gaps = [
   },
   {
     name: 'Lỗ hổng Nội dung số',
-    Icon: FileVideo, color: '#F59E0B', border: 'border-amber-500/20', bg: 'from-amber-950/25',
+    Icon: FileVideo, color: '#d0d09d', border: 'border-[#d0d09d]/20', bg: 'from-[#d0d09d]/8',
     asis:  ['Chỉ phát sóng vở diễn dài trên TV', 'Không có thư viện nhạc số', 'Thiếu nội dung cho thế hệ trẻ', 'Không có backing track karaoke'],
     tobe:  ['Video trích đoạn 30-60 giây TikTok', 'Album mp3 chèo chất lượng cao', 'Backing track karaoke chuẩn', 'Micro-content giải nghĩa chèo cổ'],
     consequence: 'Khán giả tìm nguồn nhạc lậu kém chất lượng. Nhận diện thương hiệu số mờ nhạt.',
@@ -29,13 +29,13 @@ const gaps = [
 const matrix = [
   { name: 'Kênh tiếp cận', impact: 'Cao',      difficulty: 'Trung bình',    priority: 'Ngay lập tức', pColor: 'text-red-400',    pBg: 'bg-red-500/15' },
   { name: 'Nội dung số',   impact: 'Rất cao',   difficulty: 'Thấp–Trung bình', priority: 'Ngay lập tức', pColor: 'text-red-400', pBg: 'bg-red-500/15' },
-  { name: 'Trải nghiệm',   impact: 'Trung bình', difficulty: 'Thấp',           priority: 'Ngắn hạn',  pColor: 'text-amber-400',  pBg: 'bg-amber-500/15' },
+  { name: 'Trải nghiệm',   impact: 'Trung bình', difficulty: 'Thấp',           priority: 'Ngắn hạn',  pColor: 'text-[#d0d09d]',  pBg: 'bg-[#d0d09d]/15' },
 ]
 
 export default function GapsAnalysis() {
   return (
     <section id="gaps" className="py-28 px-6 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zinc-950/60 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#1a2b23]/50 to-transparent pointer-events-none" />
       <div className="max-w-7xl mx-auto relative">
         <SectionHeader
           eyebrow="Gaps Analysis"
@@ -100,8 +100,8 @@ export default function GapsAnalysis() {
 
                 {/* Consequence */}
                 <div className="px-7 py-4 border-t border-white/5 bg-black/15 flex items-start gap-2">
-                  <AlertTriangle size={14} className="text-amber-400 shrink-0 mt-0.5" />
-                  <p className="text-amber-300/80 text-xs">
+                  <AlertTriangle size={14} style={{ color: '#d0d09d' }} className="shrink-0 mt-0.5" />
+                  <p className="text-[#d0d09d]/80 text-xs">
                     <strong className="font-semibold">Hệ quả nếu không giải quyết:</strong> {gap.consequence}
                   </p>
                 </div>
@@ -114,7 +114,7 @@ export default function GapsAnalysis() {
         <Reveal>
           <div className="glass rounded-2xl overflow-hidden">
             <div className="px-7 py-5 border-b border-white/5 flex items-center gap-2">
-              <AlertTriangle size={16} className="text-amber-400" />
+              <AlertTriangle size={16} style={{ color: '#d0d09d' }} />
               <h3 className="text-white font-bold">Ma trận Ưu tiên Giải quyết</h3>
             </div>
             <div className="overflow-x-auto">
@@ -137,7 +137,7 @@ export default function GapsAnalysis() {
                       className="border-b border-white/5 hover:bg-white/3 transition-colors"
                     >
                       <td className="px-6 py-4 text-white font-semibold">{row.name}</td>
-                      <td className="px-6 py-4 text-center text-amber-400 font-medium">{row.impact}</td>
+                      <td className="px-6 py-4 text-center font-medium" style={{ color: '#d0d09d' }}>{row.impact}</td>
                       <td className="px-6 py-4 text-center text-zinc-300">{row.difficulty}</td>
                       <td className="px-6 py-4 text-center">
                         <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold ${row.pBg} ${row.pColor}`}>

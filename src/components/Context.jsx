@@ -5,12 +5,12 @@ import { SectionHeader, Reveal, GlassCard, stagger, scaleIn } from './ui'
 const challenges = [
   { icon: TrendingDown, title: 'Suy giảm quy mô', desc: 'Đoàn chèo chuyên nghiệp toàn quốc còn dưới 20 đoàn. Nhiều đơn vị phải sáp nhập để tồn tại.', color: 'text-red-400', border: 'border-red-500/20', glow: 'rgba(239,68,68,0.15)' },
   { icon: Zap,          title: 'Cạnh tranh số hóa', desc: 'Nhạc trẻ, điện ảnh, hài kịch và nền tảng kỹ thuật số chiếm lĩnh thị phần giải trí hiện đại.', color: 'text-orange-400', border: 'border-orange-500/20', glow: 'rgba(249,115,22,0.15)' },
-  { icon: Users,        title: 'Đứt gãy thế hệ', desc: 'Khán giả trung thành chủ yếu là người cao tuổi. Thế hệ trẻ xa lánh nghệ thuật truyền thống.', color: 'text-amber-400', border: 'border-amber-500/20', glow: 'rgba(245,158,11,0.15)' },
+  { icon: Users,        title: 'Đứt gãy thế hệ', desc: 'Khán giả trung thành chủ yếu là người cao tuổi. Thế hệ trẻ xa lánh nghệ thuật truyền thống.', color: 'text-[#d0d09d]', border: 'border-[#d0d09d]/20', glow: 'rgba(208,208,157,0.15)' },
   { icon: DollarSign,   title: 'Áp lực tài chính', desc: 'Chuyển từ bao cấp sang tự chủ tài chính, ngân sách hạn hẹp khiến đầu tư tác phẩm lớn gặp khó.', color: 'text-violet-400', border: 'border-violet-500/20', glow: 'rgba(139,92,246,0.15)' },
 ]
 
 const positions = [
-  { icon: Shield, title: 'Đơn vị duy nhất', desc: 'Đoàn chèo chuyên nghiệp duy nhất thuộc Quân đội nhân dân Việt Nam. Một trong 3 đơn vị nghệ thuật lớn nhất trong 13 đoàn toàn quân.', color: 'text-amber-400' },
+  { icon: Shield, title: 'Đơn vị duy nhất', desc: 'Đoàn chèo chuyên nghiệp duy nhất thuộc Quân đội nhân dân Việt Nam. Một trong 3 đơn vị nghệ thuật lớn nhất trong 13 đoàn toàn quân.', color: 'text-[#d0d09d]' },
   { icon: Star,   title: 'Hơn 70 năm lịch sử', desc: 'Thiết chế văn hóa - chính trị vững chắc, góp phần bồi đắp lòng yêu nước và lý tưởng cách mạng cho cán bộ, chiến sĩ.', color: 'text-blue-400' },
   { icon: BookOpen, title: 'Phương châm nghệ thuật', desc: 'Hiện đại hóa chèo trên nền tảng cổ điển vững chắc — di sản NSND Tào Mạt: không phá vỡ lề lối cổ khi tiến hành cách tân.', color: 'text-emerald-400' },
 ]
@@ -30,7 +30,7 @@ export default function Context() {
           <div className="relative rounded-2xl overflow-hidden border border-white/8 bg-gradient-to-br from-white/5 to-transparent p-8 md:p-10">
             <div className="absolute top-0 right-0 w-64 h-64 bg-red-500/10 rounded-full blur-3xl pointer-events-none" />
             <div className="relative flex flex-col md:flex-row items-start md:items-center gap-8">
-              <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-gradient-to-br from-red-600 to-amber-500 flex items-center justify-center text-2xl font-black text-white shadow-lg shadow-red-900/30">
+              <div className="flex-shrink-0 w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-black shadow-lg" style={{ background: 'linear-gradient(135deg, #d0d09d, #22372f)', color: '#22372f' }}>
                 戲
               </div>
               <div className="flex-1">
@@ -45,7 +45,7 @@ export default function Context() {
               </div>
               <div className="flex gap-8 shrink-0">
                 <div className="text-center">
-                  <div className="text-4xl font-black text-amber-400">18C</div>
+                  <div className="text-4xl font-black" style={{ color: '#d0d09d' }}>18C</div>
                   <div className="text-xs text-zinc-500 mt-1">Thế kỷ đỉnh cao</div>
                 </div>
                 <div className="w-px bg-white/8" />
@@ -81,11 +81,11 @@ export default function Context() {
         {/* Theater position */}
         <Reveal>
           <div className="relative rounded-2xl overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-amber-500/8 via-transparent to-red-500/8 border border-amber-500/15 rounded-2xl" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#d0d09d]/8 via-transparent to-[#d0d09d]/4 border border-[#d0d09d]/15 rounded-2xl" />
             <div className="relative p-8">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-8 h-8 rounded-lg bg-amber-500/20 flex items-center justify-center">
-                  <Star size={16} className="text-amber-400" />
+                <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'rgba(208,208,157,0.2)' }}>
+                  <Star size={16} style={{ color: '#d0d09d' }} />
                 </div>
                 <h3 className="text-lg font-bold text-white">Vị thế đặc thù của Nhà hát Chèo Quân đội</h3>
                 <span className="ml-2 text-xs text-zinc-500 font-medium">Xuân Đỉnh, Bắc Từ Liêm, Hà Nội</span>
