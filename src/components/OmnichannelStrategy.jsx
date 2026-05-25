@@ -165,11 +165,6 @@ export default function OmnichannelStrategy() {
                 )
               })}
             </div>
-            <div className="mt-6 p-5 rounded-xl border border-amber-500/20 bg-amber-950/20 text-center">
-              <div className="text-xs text-zinc-400 mb-1">Công thức Tỷ lệ Chuyển đổi</div>
-              <div className="text-base font-bold text-amber-400">CR = (Số vé bán Offline / Tổng lượt tiếp cận Online) × 100%</div>
-              <div className="text-xs text-zinc-600 mt-1">Mục tiêu: CR ≥ 5% trong 12 tháng triển khai</div>
-            </div>
           </div>
         </Reveal>
       </div>
