@@ -77,7 +77,7 @@ export default function Conclusion() {
         <Reveal>
           <div className="relative rounded-2xl overflow-hidden">
             <div className="absolute inset-0" style={{
-              background: 'linear-gradient(135deg, #7F1D1D 0%, #451A03 35%, #1E1B4B 100%)',
+              background: 'linear-gradient(135deg, #0a2218 0%, #0f1d35 45%, #1a0d38 80%, #071e2a 100%)',
             }} />
             <div className="absolute inset-0 opacity-30" style={{
               backgroundImage: 'linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)',
@@ -91,7 +91,7 @@ export default function Conclusion() {
                 transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
                 className="inline-block mb-6"
               >
-                <div className="w-20 h-20 rounded-3xl flex items-center justify-center mx-auto text-3xl font-black shadow-2xl" style={{ background: 'linear-gradient(135deg, #d0d09d, #111815)', color: '#111815', boxShadow: '0 24px 48px rgba(208,208,157,0.2)' }}>
+                <div className="w-20 h-20 rounded-3xl flex items-center justify-center mx-auto text-3xl font-black shadow-2xl" style={{ background: 'linear-gradient(135deg, #d0d09d, #0c1009)', color: '#0c1009', boxShadow: '0 24px 48px rgba(208,208,157,0.2)' }}>
                   戲
                 </div>
               </motion.div>

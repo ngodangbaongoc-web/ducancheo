@@ -30,29 +30,30 @@ const chartData = keywords.slice(0, 10).map(k => ({
 }))
 
 const wordCloudWords = [
-  // Tier 1 — dominant
-  { text: 'hát chèo',      size: 56, color: '#d0d09d', top: '24%', left: '15%', rotate: 0 },
-  // Tier 2 — large
-  { text: 'chèo quân đội', size: 34, color: '#EF4444',  top: '32%', left: '5%',  rotate: -90 },
-  { text: 'dân ca chèo',   size: 30, color: '#d0d09d',  top: '3%',  left: '26%', rotate: 0 },
-  { text: 'NSND Tự Long',  size: 28, color: '#EF4444',  top: '50%', left: '48%', rotate: 0 },
-  // Tier 3 — medium-large
-  { text: 'nhà hát',       size: 26, color: '#8B5CF6',  top: '16%', left: '72%', rotate: 0 },
-  { text: 'karaoke chèo',  size: 24, color: '#10B981',  top: '64%', left: '16%', rotate: 0 },
-  { text: 'đào liễu',      size: 22, color: '#3B82F6',  top: '13%', left: '4%',  rotate: -12 },
-  { text: 'chèo cổ',       size: 22, color: '#d0d09d',  top: '68%', left: '58%', rotate: -8 },
-  { text: 'mp3 chèo',      size: 20, color: '#10B981',  top: '5%',  left: '64%', rotate: 8 },
-  // Tier 4 — medium
-  { text: 'quan họ',       size: 18, color: '#3B82F6',  top: '1%',  left: '80%', rotate: 5 },
-  { text: 'làn điệu',      size: 18, color: '#8B5CF6',  top: '79%', left: '76%', rotate: 5 },
-  { text: 'quốc phòng',    size: 16, color: '#10B981',  top: '38%', left: '86%', rotate: -10 },
-  { text: 'hề chèo',       size: 16, color: '#d0d09d',  top: '2%',  left: '14%', rotate: 18 },
-  { text: 'chèo văn',      size: 16, color: '#d0d09d',  top: '77%', left: '38%', rotate: -5 },
-  // Tier 5 — small
-  { text: 'dân ca cổ',     size: 14, color: '#71717A',  top: '84%', left: '53%', rotate: -8 },
-  { text: 'lưu diễn',      size: 14, color: '#71717A',  top: '87%', left: '32%', rotate: 5 },
-  { text: 'chèo quê',      size: 14, color: '#d0d09d',  top: '1%',  left: '51%', rotate: 10 },
-  { text: 'chiếu chèo',    size: 14, color: '#71717A',  top: '7%',  left: '45%', rotate: 0 },
+  // Row 1 — small words across top
+  { text: 'hề chèo',      size: 16, color: '#d0d09d', top: '2%',  left: '2%',  rotate: 10 },
+  { text: 'mp3 chèo',     size: 20, color: '#10B981', top: '1%',  left: '20%', rotate: 8 },
+  { text: 'quan họ',      size: 18, color: '#3B82F6', top: '2%',  left: '44%', rotate: -5 },
+  { text: 'chèo quê',     size: 14, color: '#d0d09d', top: '3%',  left: '68%', rotate: 0 },
+  // Row 2 — medium words
+  { text: 'nhà hát',      size: 26, color: '#8B5CF6', top: '13%', left: '2%',  rotate: 0 },
+  { text: 'dân ca chèo',  size: 30, color: '#d0d09d', top: '12%', left: '24%', rotate: 0 },
+  // Row 3 — dominant word + accent
+  { text: 'hát chèo',     size: 56, color: '#d0d09d', top: '28%', left: '12%', rotate: 0 },
+  { text: 'quốc phòng',   size: 16, color: '#10B981', top: '30%', left: '73%', rotate: -10 },
+  // Row 4 — large words
+  { text: 'chèo quân đội',size: 34, color: '#EF4444', top: '52%', left: '2%',  rotate: 0 },
+  { text: 'NSND Tự Long', size: 28, color: '#EF4444', top: '50%', left: '56%', rotate: 0 },
+  // Row 5 — medium words
+  { text: 'karaoke chèo', size: 24, color: '#10B981', top: '68%', left: '2%',  rotate: 0 },
+  { text: 'đào liễu',     size: 22, color: '#3B82F6', top: '68%', left: '37%', rotate: -12 },
+  { text: 'làn điệu',     size: 18, color: '#8B5CF6', top: '70%', left: '66%', rotate: 5 },
+  { text: 'chèo cổ',      size: 22, color: '#d0d09d', top: '68%', left: '84%', rotate: -8 },
+  // Row 6 — small words at bottom
+  { text: 'chèo văn',     size: 16, color: '#d0d09d', top: '84%', left: '4%',  rotate: -5 },
+  { text: 'dân ca cổ',    size: 14, color: '#71717A', top: '83%', left: '24%', rotate: -5 },
+  { text: 'lưu diễn',     size: 14, color: '#71717A', top: '85%', left: '46%', rotate: 5 },
+  { text: 'chiếu chèo',   size: 14, color: '#71717A', top: '83%', left: '66%', rotate: 0 },
 ]
 
 const TrendIcon = ({ trend }) => {

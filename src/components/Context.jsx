@@ -30,7 +30,7 @@ export default function Context() {
           <div className="relative rounded-2xl overflow-hidden border border-white/8 bg-gradient-to-br from-white/5 to-transparent p-8 md:p-10">
             <div className="absolute top-0 right-0 w-64 h-64 bg-red-500/10 rounded-full blur-3xl pointer-events-none" />
             <div className="relative flex flex-col md:flex-row items-start md:items-center gap-8">
-              <div className="flex-shrink-0 w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-black shadow-lg" style={{ background: 'linear-gradient(135deg, #d0d09d, #111815)', color: '#111815' }}>
+              <div className="flex-shrink-0 w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-black shadow-lg" style={{ background: 'linear-gradient(135deg, #d0d09d, #0c1009)', color: '#0c1009' }}>
                 戲
               </div>
               <div className="flex-1">

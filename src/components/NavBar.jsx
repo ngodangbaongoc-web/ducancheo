@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Music2, Menu, X, ChevronRight } from 'lucide-react'
+import { Menu, X, ChevronRight } from 'lucide-react'
 
 const links = [
   { href: '#context',  label: 'Bối cảnh' },
@@ -28,16 +28,18 @@ export default function NavBar() {
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-[#111815]/95 backdrop-blur-xl border-b border-white/10 py-3'
+          ? 'bg-[#0c1009]/95 backdrop-blur-xl border-b border-white/10 py-3'
           : 'bg-transparent py-5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #d0d09d, #111815)' }}>
-            <Music2 size={16} className="text-white" />
-          </div>
+          <img
+            src="https://i.postimg.cc/pV005gRH/Thiet-ke-chua-co-ten.png"
+            alt="Nhà hát Chèo Quân Đội"
+            className="w-8 h-8 rounded-lg object-cover"
+          />
           <span className="font-black text-white text-sm tracking-tight">
             Nhà hát Chèo<span style={{ color: '#d0d09d' }}> Quân Đội</span>
           </span>
@@ -72,7 +74,7 @@ export default function NavBar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden overflow-hidden bg-[#111815]/98 border-t border-white/10"
+            className="md:hidden overflow-hidden bg-[#0c1009]/98 border-t border-white/10"
           >
             <div className="px-6 py-4 space-y-1">
               {links.map(l => (

@@ -13,7 +13,7 @@ import NavBar from './components/NavBar'
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#111815] text-white">
+    <div className="min-h-screen bg-[#0c1009] text-white">
       <NavBar />
       <Hero />
       <Context />
