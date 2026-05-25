@@ -91,7 +91,7 @@ export default function Conclusion() {
                 transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
                 className="inline-block mb-6"
               >
-                <div className="w-20 h-20 rounded-3xl flex items-center justify-center mx-auto text-3xl font-black shadow-2xl" style={{ background: 'linear-gradient(135deg, #d0d09d, #22372f)', color: '#22372f', boxShadow: '0 24px 48px rgba(208,208,157,0.2)' }}>
+                <div className="w-20 h-20 rounded-3xl flex items-center justify-center mx-auto text-3xl font-black shadow-2xl" style={{ background: 'linear-gradient(135deg, #d0d09d, #111815)', color: '#111815', boxShadow: '0 24px 48px rgba(208,208,157,0.2)' }}>
                   戲
                 </div>
               </motion.div>

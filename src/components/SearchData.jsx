@@ -30,33 +30,29 @@ const chartData = keywords.slice(0, 10).map(k => ({
 }))
 
 const wordCloudWords = [
-  { text: 'hát chèo', size: 46, color: '#d0d09d' },
-  { text: 'chèo quân đội', size: 34, color: '#EF4444' },
-  { text: 'dân ca chèo', size: 28, color: '#d0d09d' },
-  { text: 'nhà hát', size: 26, color: '#8B5CF6' },
-  { text: 'đào liễu', size: 22, color: '#3B82F6' },
-  { text: 'karaoke chèo', size: 20, color: '#10B981' },
-  { text: 'mp3 chèo', size: 19, color: '#10B981' },
-  { text: 'chèo văn', size: 18, color: '#d0d09d' },
-  { text: 'dân ca cổ', size: 16, color: '#71717A' },
-  { text: 'quan họ', size: 16, color: '#3B82F6' },
-  { text: 'chèo cổ', size: 22, color: '#d0d09d' },
-  { text: 'NSND Tự Long', size: 24, color: '#EF4444' },
-  { text: 'lưu diễn', size: 14, color: '#71717A' },
-  { text: 'quốc phòng', size: 15, color: '#10B981' },
-  { text: 'chèo quê', size: 14, color: '#d0d09d' },
-  { text: 'làn điệu', size: 17, color: '#8B5CF6' },
-  { text: 'hề chèo', size: 15, color: '#d0d09d' },
-  { text: 'chiếu chèo', size: 14, color: '#71717A' },
-]
-
-const cloudPositions = [
-  { top: '8%',  left: '32%'  }, { top: '18%', left: '6%'   }, { top: '20%', left: '62%'  },
-  { top: '32%', left: '2%'   }, { top: '33%', left: '46%'  }, { top: '34%', left: '78%'  },
-  { top: '48%', left: '18%'  }, { top: '49%', left: '52%'  }, { top: '50%', left: '76%'  },
-  { top: '62%', left: '5%'   }, { top: '63%', left: '38%'  }, { top: '64%', left: '66%'  },
-  { top: '75%', left: '22%'  }, { top: '76%', left: '56%'  }, { top: '77%', left: '82%'  },
-  { top: '88%', left: '8%'   }, { top: '89%', left: '44%'  }, { top: '89%', left: '70%'  },
+  // Tier 1 — dominant
+  { text: 'hát chèo',      size: 56, color: '#d0d09d', top: '24%', left: '15%', rotate: 0 },
+  // Tier 2 — large
+  { text: 'chèo quân đội', size: 34, color: '#EF4444',  top: '32%', left: '5%',  rotate: -90 },
+  { text: 'dân ca chèo',   size: 30, color: '#d0d09d',  top: '3%',  left: '26%', rotate: 0 },
+  { text: 'NSND Tự Long',  size: 28, color: '#EF4444',  top: '50%', left: '48%', rotate: 0 },
+  // Tier 3 — medium-large
+  { text: 'nhà hát',       size: 26, color: '#8B5CF6',  top: '16%', left: '72%', rotate: 0 },
+  { text: 'karaoke chèo',  size: 24, color: '#10B981',  top: '64%', left: '16%', rotate: 0 },
+  { text: 'đào liễu',      size: 22, color: '#3B82F6',  top: '13%', left: '4%',  rotate: -12 },
+  { text: 'chèo cổ',       size: 22, color: '#d0d09d',  top: '68%', left: '58%', rotate: -8 },
+  { text: 'mp3 chèo',      size: 20, color: '#10B981',  top: '5%',  left: '64%', rotate: 8 },
+  // Tier 4 — medium
+  { text: 'quan họ',       size: 18, color: '#3B82F6',  top: '1%',  left: '80%', rotate: 5 },
+  { text: 'làn điệu',      size: 18, color: '#8B5CF6',  top: '79%', left: '76%', rotate: 5 },
+  { text: 'quốc phòng',    size: 16, color: '#10B981',  top: '38%', left: '86%', rotate: -10 },
+  { text: 'hề chèo',       size: 16, color: '#d0d09d',  top: '2%',  left: '14%', rotate: 18 },
+  { text: 'chèo văn',      size: 16, color: '#d0d09d',  top: '77%', left: '38%', rotate: -5 },
+  // Tier 5 — small
+  { text: 'dân ca cổ',     size: 14, color: '#71717A',  top: '84%', left: '53%', rotate: -8 },
+  { text: 'lưu diễn',      size: 14, color: '#71717A',  top: '87%', left: '32%', rotate: 5 },
+  { text: 'chèo quê',      size: 14, color: '#d0d09d',  top: '1%',  left: '51%', rotate: 10 },
+  { text: 'chiếu chèo',    size: 14, color: '#71717A',  top: '7%',  left: '45%', rotate: 0 },
 ]
 
 const TrendIcon = ({ trend }) => {
@@ -133,22 +129,23 @@ export default function SearchData() {
             <div className="glass rounded-2xl p-8 h-full">
               <h3 className="text-white font-bold text-lg mb-1">Word Cloud — Chủ đề Chèo</h3>
               <p className="text-zinc-500 text-sm mb-6">Kích thước phản ánh volume tìm kiếm</p>
-              <div className="relative h-[300px] overflow-hidden">
+              <div className="relative h-[360px] overflow-hidden">
                 {wordCloudWords.map((word, i) => (
                   <motion.span
                     key={word.text}
                     className="word-item absolute font-black"
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    whileInView={{ opacity: 0.85, scale: 1 }}
+                    initial={{ opacity: 0, scale: 0.4 }}
+                    whileInView={{ opacity: 0.9, scale: 1 }}
                     viewport={{ once: true }}
-                    transition={{ delay: i * 0.04, type: 'spring', stiffness: 200, damping: 15 }}
+                    transition={{ delay: i * 0.04, type: 'spring', stiffness: 180, damping: 14 }}
                     style={{
                       fontSize: word.size,
                       color: word.color,
-                      top: cloudPositions[i % cloudPositions.length].top,
-                      left: cloudPositions[i % cloudPositions.length].left,
-                      transform: `rotate(${(i % 5 - 2) * 5}deg)`,
-                      textShadow: `0 0 20px ${word.color}60`,
+                      top: word.top,
+                      left: word.left,
+                      transform: `rotate(${word.rotate}deg)`,
+                      textShadow: `0 0 24px ${word.color}50`,
+                      transformOrigin: 'center center',
                     }}
                   >
                     {word.text}

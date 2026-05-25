@@ -5,7 +5,6 @@ import Context from './components/Context'
 import AudienceSegments from './components/AudienceSegments'
 import SearchData from './components/SearchData'
 import SocialMedia from './components/SocialMedia'
-import Personas from './components/Personas'
 import ValueProposition from './components/ValueProposition'
 import GapsAnalysis from './components/GapsAnalysis'
 import OmnichannelStrategy from './components/OmnichannelStrategy'
@@ -14,7 +13,7 @@ import NavBar from './components/NavBar'
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#22372f] text-white">
+    <div className="min-h-screen bg-[#111815] text-white">
       <NavBar />
       <Hero />
       <Context />
@@ -22,7 +21,6 @@ export default function App() {
       <AudienceSegments />
       <SearchData />
       <SocialMedia />
-      <Personas />
       <ValueProposition />
       <GapsAnalysis />
       <OmnichannelStrategy />

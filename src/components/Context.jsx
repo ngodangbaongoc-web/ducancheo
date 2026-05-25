@@ -30,7 +30,7 @@ export default function Context() {
           <div className="relative rounded-2xl overflow-hidden border border-white/8 bg-gradient-to-br from-white/5 to-transparent p-8 md:p-10">
             <div className="absolute top-0 right-0 w-64 h-64 bg-red-500/10 rounded-full blur-3xl pointer-events-none" />
             <div className="relative flex flex-col md:flex-row items-start md:items-center gap-8">
-              <div className="flex-shrink-0 w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-black shadow-lg" style={{ background: 'linear-gradient(135deg, #d0d09d, #22372f)', color: '#22372f' }}>
+              <div className="flex-shrink-0 w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-black shadow-lg" style={{ background: 'linear-gradient(135deg, #d0d09d, #111815)', color: '#111815' }}>
                 戲
               </div>
               <div className="flex-1">
@@ -42,17 +42,6 @@ export default function Context() {
                   <span className="text-white font-semibold">nhà hát hộp khép kín</span>{' '}
                   đặt chèo trước thách thức sinh tồn mang tính cấu trúc sâu sắc.
                 </p>
-              </div>
-              <div className="flex gap-8 shrink-0">
-                <div className="text-center">
-                  <div className="text-4xl font-black" style={{ color: '#d0d09d' }}>18C</div>
-                  <div className="text-xs text-zinc-500 mt-1">Thế kỷ đỉnh cao</div>
-                </div>
-                <div className="w-px bg-white/8" />
-                <div className="text-center">
-                  <div className="text-4xl font-black text-red-400">&lt;20</div>
-                  <div className="text-xs text-zinc-500 mt-1">Đoàn còn lại</div>
-                </div>
               </div>
             </div>
           </div>
