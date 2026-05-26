@@ -5,8 +5,6 @@ import Context from './components/Context'
 import AudienceSegments from './components/AudienceSegments'
 import SearchData from './components/SearchData'
 import SocialMedia from './components/SocialMedia'
-import ValueProposition from './components/ValueProposition'
-import GapsAnalysis from './components/GapsAnalysis'
 import OmnichannelStrategy from './components/OmnichannelStrategy'
 import Conclusion from './components/Conclusion'
 import NavBar from './components/NavBar'
@@ -21,8 +19,6 @@ export default function App() {
       <AudienceSegments />
       <SearchData />
       <SocialMedia />
-      <ValueProposition />
-      <GapsAnalysis />
       <OmnichannelStrategy />
       <Conclusion />
     </div>
