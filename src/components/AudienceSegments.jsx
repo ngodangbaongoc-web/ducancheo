@@ -57,10 +57,27 @@ export default function AudienceSegments() {
   const radarData = axes.map((a, i) => ({ subject: a, value: seg.radar[i] }))
 
   return (
-    <section id="audience" className="py-28 px-6">
+    <section id="part2" className="py-28 px-6">
       <div className="max-w-7xl mx-auto">
+
+        {/* Part header */}
+        <div className="flex items-center gap-3 mb-6">
+          <span className="text-[10px] font-black text-zinc-600 uppercase tracking-[0.2em]">Phần 02</span>
+          <div className="h-px flex-1 bg-white/5" />
+        </div>
+
+        {/* Sub-section 2.1 label */}
+        <div className="flex items-center gap-3 mb-6">
+          <div className="flex items-center gap-2 shrink-0">
+            <div className="w-0.5 h-5 rounded-full bg-emerald-400" />
+            <span className="text-xs font-black text-emerald-400">2.1</span>
+            <span className="text-xs text-zinc-400 font-semibold uppercase tracking-wider">Chân Dung & Hành Vi Khán Giả</span>
+          </div>
+          <div className="h-px flex-1 bg-white/5" />
+        </div>
+
         <SectionHeader
-          eyebrow="Phân khúc khán giả"
+          eyebrow="Nghiên cứu Khán giả"
           title="Ba Nhóm Khán Giả Cốt Lõi"
           subtitle="Phân tích nhân khẩu học và hành vi tiêu dùng văn hóa của từng nhóm công chúng mục tiêu."
         />

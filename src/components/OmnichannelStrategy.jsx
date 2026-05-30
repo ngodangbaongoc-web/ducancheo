@@ -69,13 +69,20 @@ export default function OmnichannelStrategy() {
   const strat = strategies.find(s => s.id === active)
 
   return (
-    <section id="strategy" className="py-28 px-6 relative">
+    <section id="part4" className="py-28 px-6 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#1a2b23]/50 to-transparent pointer-events-none" />
       <div className="max-w-7xl mx-auto relative">
+
+        {/* Part header */}
+        <div className="flex items-center gap-3 mb-6">
+          <span className="text-[10px] font-black text-zinc-600 uppercase tracking-[0.2em]">Phần 04</span>
+          <div className="h-px flex-1 bg-white/5" />
+        </div>
+
         <SectionHeader
-          eyebrow="Chiến lược"
-          title="Định Hướng Chiến Lược"
-          subtitle="Năm hướng triển khai cốt lõi giúp Nhà hát Chèo Quân đội chuyển đổi số, trẻ hóa công chúng và khẳng định vị thế bền vững."
+          eyebrow="Giải pháp & Công cụ"
+          title="Hệ Thống Giải Pháp Thực Thi"
+          subtitle="Năm công cụ và phương thức cụ thể giúp Nhà hát Chèo Quân đội hiện thực hóa chiến lược Digital-first đã đề ra ở Phần 3."
         />
 
         {/* Strategy tabs */}

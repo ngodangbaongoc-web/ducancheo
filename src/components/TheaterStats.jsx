@@ -1,6 +1,6 @@
 import { motion, useInView, useMotionValue, useSpring, useTransform } from 'framer-motion'
 import { useEffect, useRef } from 'react'
-import { Award, Star, Mic2, Calendar, TrendingUp } from 'lucide-react'
+import { Award, Star, Mic2, Calendar, TrendingUp, ArrowRight } from 'lucide-react'
 import { SectionHeader, Reveal, scaleIn } from './ui'
 
 function AnimatedNumber({ target, suffix = '' }) {
@@ -37,10 +37,21 @@ export default function TheaterStats() {
     <section id="stats" className="py-28 px-6 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0f0c]/50 to-transparent pointer-events-none" />
       <div className="max-w-7xl mx-auto relative">
+
+        {/* Sub-section 1.3 label */}
+        <div className="flex items-center gap-3 mb-8">
+          <div className="flex items-center gap-2 shrink-0">
+            <div className="w-0.5 h-5 rounded-full bg-emerald-400" />
+            <span className="text-xs font-black text-emerald-400">1.3</span>
+            <span className="text-xs text-zinc-400 font-semibold uppercase tracking-wider">Nội Tại Nhà Hát — Nhân Sự, Thành Tích & Lịch Sử</span>
+          </div>
+          <div className="h-px flex-1 bg-white/5" />
+        </div>
+
         <SectionHeader
-          eyebrow="Thống kê nhà hát"
+          eyebrow="Nguồn lực nội tại"
           title="Chỉ Số Hoạt Động & Nhân Sự"
-          subtitle="Số liệu thực tế về lực lượng nghệ sĩ và thành tích biểu diễn của Nhà hát Chèo Quân đội."
+          subtitle="Số liệu thực tế về lực lượng nghệ sĩ và thành tích biểu diễn — nền tảng sức mạnh nội sinh của Nhà hát Chèo Quân đội."
         />
 
         {/* Stat cards */}
@@ -71,7 +82,7 @@ export default function TheaterStats() {
 
         {/* Horizontal roadmap */}
         <Reveal>
-          <div className="glass rounded-2xl p-8">
+          <div className="glass rounded-2xl p-8 mb-10">
             <div className="flex items-center gap-2.5 mb-10">
               <Calendar size={18} className="text-blue-400" />
               <h3 className="text-white font-bold text-lg">Mốc Thành Tựu Nổi Bật</h3>
@@ -128,6 +139,34 @@ export default function TheaterStats() {
                     </motion.div>
                   </motion.div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </Reveal>
+        {/* Part 1 Conclusion / Transition */}
+        <Reveal>
+          <div className="rounded-2xl overflow-hidden border border-white/8 bg-gradient-to-br from-white/3 to-transparent">
+            <div className="flex items-center gap-2 px-7 py-4 border-b border-white/5">
+              <div className="w-2 h-2 rounded-full" style={{ background: '#d0d09d' }} />
+              <span className="text-xs font-bold uppercase tracking-widest" style={{ color: '#d0d09d' }}>Đánh giá — Kết luận Phần 1</span>
+            </div>
+            <div className="p-7 grid md:grid-cols-2 gap-6">
+              <p className="text-zinc-300 leading-relaxed text-sm">
+                Nhà hát Chèo Quân đội sở hữu lực lượng nghệ sĩ tinh hoa và vị thế chính trị vững chắc,
+                nhưng đang đứng trước thách thức sinh tồn mang tính cấu trúc trong kỷ nguyên số:
+                <strong className="text-white"> khán giả truyền thống già hóa, kênh tiếp cận lỗi thời
+                và áp lực tự chủ tài chính ngày càng lớn.</strong>
+              </p>
+              <div className="border-l border-white/5 pl-6">
+                <div className="text-zinc-500 text-xs uppercase tracking-wider mb-2 font-medium">Kết luận then chốt</div>
+                <p className="text-white font-semibold leading-relaxed text-sm">
+                  Thay đổi không còn là lựa chọn — đây là điều kiện tồn tại.
+                  Câu hỏi đặt ra: khán giả tiềm năng của Nhà hát đang ở đâu và họ đang tìm kiếm gì?
+                </p>
+                <div className="mt-4 flex items-center gap-2 text-sm font-semibold" style={{ color: '#d0d09d' }}>
+                  <ArrowRight size={14} />
+                  <span>Phần 2 sẽ trả lời câu hỏi này</span>
+                </div>
               </div>
             </div>
           </div>

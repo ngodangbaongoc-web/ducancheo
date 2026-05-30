@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ChevronRight } from 'lucide-react'
 
 const links = [
-  { href: '#context',  label: 'Bối cảnh' },
-  { href: '#stats',    label: 'Thống kê' },
-  { href: '#audience', label: 'Khán giả' },
-  { href: '#search',   label: 'Google Trends' },
-  { href: '#social',   label: 'Mạng xã hội' },
-  { href: '#strategy', label: 'Chiến lược' },
+  { href: '#summary', label: 'Tổng quan' },
+  { href: '#part1',   label: 'Phần 1 — Bối cảnh' },
+  { href: '#part2',   label: 'Phần 2 — Khán giả' },
+  { href: '#part3',   label: 'Phần 3 — Chiến lược' },
+  { href: '#part4',   label: 'Phần 4 — Giải pháp' },
+  { href: '#part5',   label: 'Phần 5 — Kết luận' },
 ]
 
 export default function NavBar() {

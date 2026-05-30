@@ -56,6 +56,21 @@ const wordCloudWords = [
   { text: 'chiếu chèo',   size: 14, color: '#71717A', top: '83%', left: '66%', rotate: 0 },
 ]
 
+const compareArts = [
+  { art: 'Cải lương', vol: 120000, pct: 100, color: '#EF4444', note: 'Đứng đầu nghệ thuật truyền thống' },
+  { art: 'Kịch nói',  vol: 80000,  pct: 67,  color: '#3B82F6', note: 'Nghệ thuật đương đại, phổ biến đô thị' },
+  { art: 'Chèo ★',    vol: 50000,  pct: 42,  color: '#d0d09d', note: 'Tiềm năng lớn, chưa được khai thác số' },
+  { art: 'Quan họ',   vol: 25000,  pct: 21,  color: '#10B981', note: 'Di sản UNESCO, tăng theo mùa lễ hội' },
+  { art: 'Tuồng',     vol: 8000,   pct: 7,   color: '#8B5CF6', note: 'Nhóm nhỏ nhất trong nghệ thuật cổ truyền' },
+]
+
+const compareTheaters = [
+  { name: 'Nhà hát Tuổi Trẻ',   fans: 450000, pct: 100, color: '#EF4444', note: 'Dẫn đầu sân khấu kịch Việt Nam' },
+  { name: 'Kịch Việt Nam',       fans: 55000,  pct: 12,  color: '#3B82F6', note: 'Đơn vị nghệ thuật quốc gia' },
+  { name: 'Chèo Việt Nam',       fans: 32000,  pct: 7,   color: '#10B981', note: 'Nhà hát chèo lớn nhất VN' },
+  { name: 'NHCQD ★',             fans: 12000,  pct: 2.7, color: '#d0d09d', note: 'Tiềm năng tăng trưởng rất lớn' },
+]
+
 const TrendIcon = ({ trend }) => {
   if (trend === 'explosive') return <Rocket size={12} className="text-emerald-400" />
   if (trend === 'up')        return <TrendingUp size={12} className="text-blue-400" />
@@ -88,10 +103,91 @@ export default function SearchData() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#1a2b23]/50 to-transparent pointer-events-none" />
       <div className="max-w-7xl mx-auto relative">
         <SectionHeader
-          eyebrow="Social Listening"
-          title="Phân Tích Google Search Data"
-          subtitle='Internet Listening "hát chèo" — 01/03/2025 đến 28/02/2026. Bức tranh hành vi tìm kiếm thực tế của công chúng Việt Nam.'
+          eyebrow="Insights thị trường"
+          title="Nghiên Cứu Khán Giả & Thị Trường"
+          subtitle='Đối chiếu vị thế cạnh tranh và phân tích hành vi tìm kiếm thực tế — dữ liệu làm căn cứ xây dựng chiến lược.'
         />
+
+        {/* 2.2 Sub-section label */}
+        <div className="flex items-center gap-3 mb-6">
+          <div className="flex items-center gap-2 shrink-0">
+            <div className="w-0.5 h-5 rounded-full bg-red-400" />
+            <span className="text-xs font-black text-red-400">2.2</span>
+            <span className="text-xs text-zinc-400 font-semibold uppercase tracking-wider">Đối Chiếu Thị Trường — So Sánh Với Các Đơn Vị Khác</span>
+          </div>
+          <div className="h-px flex-1 bg-white/5" />
+        </div>
+
+        {/* Comparative Analysis */}
+        <div className="grid md:grid-cols-2 gap-5 mb-10">
+          {/* Search volume comparison */}
+          <Reveal>
+            <div className="glass rounded-2xl p-7 h-full">
+              <h3 className="text-white font-bold text-base mb-1">Lượt Tìm Kiếm Theo Loại Hình Nghệ Thuật</h3>
+              <p className="text-zinc-500 text-xs mb-5">Google Keyword Stats, tháng 3/2025–2/2026 (lượt/tháng)</p>
+              <div className="space-y-3">
+                {compareArts.map(a => (
+                  <div key={a.art}>
+                    <div className="flex justify-between items-center mb-1">
+                      <span className="text-sm font-semibold" style={{ color: a.art.includes('★') ? '#d0d09d' : 'white' }}>{a.art}</span>
+                      <span className="text-xs font-black" style={{ color: a.color }}>{a.vol.toLocaleString()}</span>
+                    </div>
+                    <div className="h-1.5 rounded-full bg-white/5 overflow-hidden">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${a.pct}%` }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.1 }}
+                        className="h-full rounded-full"
+                        style={{ background: a.color + (a.art.includes('★') ? 'FF' : '99') }}
+                      />
+                    </div>
+                    <div className="text-zinc-600 text-[10px] mt-0.5">{a.note}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+
+          {/* Theater social media comparison */}
+          <Reveal delay={0.1}>
+            <div className="glass rounded-2xl p-7 h-full">
+              <h3 className="text-white font-bold text-base mb-1">Fanbase Facebook Các Nhà Hát</h3>
+              <p className="text-zinc-500 text-xs mb-5">Số lượng người theo dõi fanpage (2025)</p>
+              <div className="space-y-3">
+                {compareTheaters.map(t => (
+                  <div key={t.name}>
+                    <div className="flex justify-between items-center mb-1">
+                      <span className="text-sm font-semibold" style={{ color: t.name.includes('★') ? '#d0d09d' : 'white' }}>{t.name}</span>
+                      <span className="text-xs font-black" style={{ color: t.color }}>{(t.fans/1000).toFixed(0)}K</span>
+                    </div>
+                    <div className="h-1.5 rounded-full bg-white/5 overflow-hidden">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${t.pct}%` }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.1 }}
+                        className="h-full rounded-full"
+                        style={{ background: t.color + (t.name.includes('★') ? 'FF' : '99') }}
+                      />
+                    </div>
+                    <div className="text-zinc-600 text-[10px] mt-0.5">{t.note}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        </div>
+
+        {/* 2.3 Sub-section label */}
+        <div className="flex items-center gap-3 mb-6">
+          <div className="flex items-center gap-2 shrink-0">
+            <div className="w-0.5 h-5 rounded-full" style={{ background: '#d0d09d' }} />
+            <span className="text-xs font-black" style={{ color: '#d0d09d' }}>2.3</span>
+            <span className="text-xs text-zinc-400 font-semibold uppercase tracking-wider">Social Listening & Google Search Data</span>
+          </div>
+          <div className="h-px flex-1 bg-white/5" />
+        </div>
 
         <div className="grid lg:grid-cols-2 gap-6 mb-8">
           {/* Bar chart */}

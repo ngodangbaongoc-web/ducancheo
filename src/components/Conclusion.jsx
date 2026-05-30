@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Music2, Smartphone, Ticket, Sparkles } from 'lucide-react'
+import { Music2, Smartphone, Ticket, Sparkles, CheckCircle2, AlertTriangle, Lightbulb } from 'lucide-react'
 import { SectionHeader, Reveal, stagger, scaleIn } from './ui'
 
 const recommendations = [
@@ -12,12 +12,18 @@ const hashtags = ['#ChèoQuânĐội', '#DigitalFirst', '#OmnichannelArts', '#Tr
 
 export default function Conclusion() {
   return (
-    <section className="py-28 px-6">
+    <section id="part5" className="py-28 px-6">
       <div className="max-w-5xl mx-auto">
         <div className="h-px bg-gradient-to-r from-transparent via-red-500/40 to-transparent mb-20" />
 
+        {/* Part header */}
+        <div className="flex items-center gap-3 mb-6">
+          <span className="text-[10px] font-black text-zinc-600 uppercase tracking-[0.2em]">Phần 05</span>
+          <div className="h-px flex-1 bg-white/5" />
+        </div>
+
         <SectionHeader
-          eyebrow="Kết luận & Khuyến nghị"
+          eyebrow="Kết luận & Kiến nghị"
           title="Lối Thoát Cho Sân Khấu Chèo"
         />
 
@@ -119,6 +125,35 @@ export default function Conclusion() {
                   </motion.span>
                 ))}
               </div>
+            </div>
+          </div>
+        </Reveal>
+
+        {/* Recommendations */}
+        <Reveal className="mb-10">
+          <div className="rounded-2xl overflow-hidden border border-[#d0d09d]/20 bg-gradient-to-br from-[#d0d09d]/6 to-transparent">
+            <div className="flex items-center gap-2 px-7 py-5 border-b border-white/5">
+              <Lightbulb size={16} style={{ color: '#d0d09d' }} />
+              <h3 className="text-white font-bold text-lg">Kiến Nghị Thực Tiễn</h3>
+              <span className="text-zinc-500 text-sm ml-1">— Góc nhìn của người tư vấn</span>
+            </div>
+            <div className="p-7 grid md:grid-cols-2 gap-4">
+              {[
+                { icon: CheckCircle2, color: '#10B981', title: 'Bắt đầu từ "quick wins" đo lường được', desc: 'Trong 30 ngày đầu: quay 5 video hậu trường, đăng TikTok và theo dõi engagement. Chi phí gần bằng 0 nhưng dữ liệu thu về cực kỳ có giá trị.' },
+                { icon: CheckCircle2, color: '#3B82F6', title: 'Ưu tiên nhân sự content chuyên biệt', desc: 'Không thể giao nội dung số như "việc phụ" cho nhân viên hành chính. Cần ít nhất 1 người phụ trách full-time: quay, dựng, đăng, phân tích số liệu.' },
+                { icon: AlertTriangle, color: '#d0d09d', title: 'Không cách tân khi chưa có nền tảng số', desc: 'Tránh đầu tư vào sân khấu hoành tráng trước khi xây dựng kênh phân phối số. Khán giả phải "tìm được" Nhà hát trước khi đến rạp.' },
+                { icon: AlertTriangle, color: '#EF4444', title: 'Đo lường liên tục — không làm theo cảm tính', desc: 'Đặt KPI cụ thể cho từng chiến dịch (reach, conversion, revenue). Nếu sau 60 ngày một kênh không hiệu quả, chuyển nguồn lực sang kênh khác — không bám víu.' },
+              ].map(r => (
+                <div key={r.title} className="glass rounded-xl p-5 border border-white/8">
+                  <div className="flex items-start gap-3">
+                    <r.icon size={16} className="shrink-0 mt-0.5" style={{ color: r.color }} />
+                    <div>
+                      <div className="text-white font-bold text-sm mb-1">{r.title}</div>
+                      <p className="text-zinc-400 text-xs leading-relaxed">{r.desc}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </Reveal>

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend, CartesianGrid } from 'recharts'
-import { Heart, MessageCircle, Share2, Flame, Video, Mic2, BookOpen, Megaphone, Ticket, Star } from 'lucide-react'
+import { Heart, MessageCircle, Share2, Flame, Video, Mic2, BookOpen, Megaphone, Ticket, Star, ArrowRight } from 'lucide-react'
 import { SectionHeader, Reveal, stagger, scaleIn } from './ui'
 
 const posts = [
@@ -120,7 +120,7 @@ export default function SocialMedia() {
         </motion.div>
 
         {/* Key takeaways */}
-        <div className="grid md:grid-cols-2 gap-5">
+        <div className="grid md:grid-cols-2 gap-5 mb-10">
           <Reveal>
             <div className="rounded-2xl p-7 bg-gradient-to-br from-emerald-950/40 to-transparent border border-emerald-500/20 h-full">
               <div className="flex items-center gap-2 mb-3">
@@ -149,6 +149,36 @@ export default function SocialMedia() {
             </div>
           </Reveal>
         </div>
+
+        {/* Part 2 Conclusion / Transition */}
+        <Reveal>
+          <div className="rounded-2xl overflow-hidden border border-blue-500/20 bg-gradient-to-br from-blue-950/20 to-transparent">
+            <div className="flex items-center gap-2 px-7 py-4 border-b border-white/5">
+              <div className="w-2 h-2 rounded-full bg-blue-400" />
+              <span className="text-blue-400 text-xs font-bold uppercase tracking-widest">Insight cốt lõi — Kết luận Phần 2</span>
+            </div>
+            <div className="p-7 grid md:grid-cols-2 gap-6">
+              <p className="text-zinc-300 leading-relaxed text-sm">
+                Dữ liệu không nói dối: nhu cầu khán giả cho nghệ thuật chèo vẫn rất lớn
+                (<strong className="text-white">50.000 lượt tìm kiếm/tháng</strong>), nhưng phần lớn
+                tập trung vào nhu cầu số hóa — karaoke, mp3, video ngắn —{' '}
+                những thứ Nhà hát hiện chưa cung cấp được. Fanbase Facebook còn rất nhỏ so với
+                các đơn vị cùng ngành, chỉ bằng 2,7% Nhà hát Tuổi Trẻ.
+              </p>
+              <div className="border-l border-white/5 pl-6">
+                <div className="text-zinc-500 text-xs uppercase tracking-wider mb-2 font-medium">Insight chiến lược</div>
+                <p className="text-white font-semibold leading-relaxed text-sm">
+                  Nhà hát không thiếu khán giả — Nhà hát đang thiếu kênh và định dạng nội dung
+                  phù hợp. Đây là cơ hội tăng trưởng lớn, không phải khủng hoảng không thể vãn hồi.
+                </p>
+                <div className="mt-4 flex items-center gap-2 text-blue-400 text-sm font-semibold">
+                  <ArrowRight size={14} />
+                  <span>Phần 3: Định hướng chiến lược từ insight này</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   )
