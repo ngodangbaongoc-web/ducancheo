@@ -149,34 +149,6 @@ export default function SearchData() {
             </div>
           </Reveal>
 
-          {/* Theater social media comparison */}
-          <Reveal delay={0.1}>
-            <div className="glass rounded-2xl p-7 h-full">
-              <h3 className="text-white font-bold text-base mb-1">Fanbase Facebook Các Nhà Hát</h3>
-              <p className="text-zinc-500 text-xs mb-5">Số lượng người theo dõi fanpage (2025)</p>
-              <div className="space-y-3">
-                {compareTheaters.map(t => (
-                  <div key={t.name}>
-                    <div className="flex justify-between items-center mb-1">
-                      <span className="text-sm font-semibold" style={{ color: t.name.includes('★') ? '#d0d09d' : 'white' }}>{t.name}</span>
-                      <span className="text-xs font-black" style={{ color: t.color }}>{(t.fans/1000).toFixed(0)}K</span>
-                    </div>
-                    <div className="h-1.5 rounded-full bg-white/5 overflow-hidden">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${t.pct}%` }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8, delay: 0.1 }}
-                        className="h-full rounded-full"
-                        style={{ background: t.color + (t.name.includes('★') ? 'FF' : '99') }}
-                      />
-                    </div>
-                    <div className="text-zinc-600 text-[10px] mt-0.5">{t.note}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </Reveal>
         </div>
 
         {/* 2.3 Sub-section label */}

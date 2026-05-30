@@ -63,9 +63,8 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
         >
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-[1.05] tracking-tight mb-4">
-            <span className="block text-white">Nghiên cứu chân dung &</span>
-            <span className="block shimmer-text">hành vi khán giả</span>
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-black leading-tight tracking-tight mb-4 whitespace-nowrap">
+            <span className="text-white">Nghiên cứu chân dung & </span><span className="shimmer-text">hành vi khán giả</span>
           </h1>
           <p className="text-2xl md:text-3xl font-light text-zinc-400 mb-3 tracking-tight">
             Nhà Hát <span className="text-white font-semibold">Chèo Quân Đội</span>
