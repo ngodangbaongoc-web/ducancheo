@@ -64,8 +64,8 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
         >
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-[1.05] tracking-tight mb-4">
-            <span className="block text-white">Chân Dung &</span>
-            <span className="block shimmer-text">Hành Vi Khán Giả</span>
+            <span className="block text-white">Nghiên cứu chân dung &</span>
+            <span className="block shimmer-text">hành vi khán giả</span>
           </h1>
           <p className="text-2xl md:text-3xl font-light text-zinc-400 mb-3 tracking-tight">
             Nhà Hát <span className="text-white font-semibold">Chèo Quân Đội</span>
@@ -83,28 +83,6 @@ export default function Hero() {
           và chiến lược tiếp cận đa kênh nhằm trẻ hóa công chúng nghệ thuật truyền thống.
         </motion.p>
 
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-12"
-        >
-          {stats.map((s, i) => (
-            <motion.div
-              key={s.label}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.5 + i * 0.08 }}
-              className="glass rounded-2xl p-4 text-center group hover:border-white/20 transition-all"
-            >
-              <s.icon size={16} className={`mx-auto mb-2 ${s.color} group-hover:scale-110 transition-transform`} />
-              <div className={`text-2xl font-black ${s.color}`}>{s.num}</div>
-              <div className="text-white text-xs font-semibold mt-0.5">{s.label}</div>
-              <div className="text-zinc-500 text-xs">{s.sub}</div>
-            </motion.div>
-          ))}
-        </motion.div>
 
         {/* CTA buttons */}
         <motion.div
