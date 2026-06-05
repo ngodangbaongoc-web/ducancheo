@@ -38,9 +38,7 @@ export default function SummaryIntro() {
                     tiêu biểu tại Việt Nam đang đứng trước thời điểm chuyển mình mang tính lịch sử.
                   </p>
                   <p className="text-zinc-400 leading-relaxed">
-                    Mọi nhận định trong báo cáo đều được xây dựng trên nền tảng dữ liệu thực —
-                    không phải lý thuyết chung chung — để đảm bảo tính khoa học và khả năng
-                    ứng dụng trực tiếp vào thực tiễn hoạt động của Nhà hát.
+                    Mọi thông tin và nhận định trong báo cáo này được xây dựng trên cơ sở nền tảng dữ liệu được xác thực từ nhiều nguồn uy tín nhằm đảm bảo tính khoa học và khả năng ứng dụng trực tiếp vào thực tiễn hoạt động của Nhà hát.
                   </p>
                 </div>
                 <div className="glass rounded-xl p-6 border border-white/8">

@@ -29,12 +29,12 @@ const chartData = posts.map(p => ({
 const CustomTooltip = ({ active, payload }) => {
   if (!active || !payload?.length) return null
   return (
-    <div className="glass rounded-xl px-4 py-3 text-sm text-white border border-white/12 max-w-[260px]">
-      <div className="font-bold mb-1.5 text-xs" style={{ color: '#d0d09d' }}>{payload[0]?.payload?.fullName}</div>
+    <div className="rounded-xl px-4 py-3 text-sm text-white border border-blue-400/30 max-w-[260px]" style={{ background: 'rgba(59,130,246,0.25)', backdropFilter: 'blur(12px)' }}>
+      <div className="font-bold mb-1.5 text-xs text-white">{payload[0]?.payload?.fullName}</div>
       {payload.map(p => (
         <div key={p.dataKey} className="flex justify-between gap-6 text-xs">
-          <span style={{ color: p.fill }}>{p.name}</span>
-          <strong>{p.value.toLocaleString()}</strong>
+          <span className="text-white/80">{p.name}</span>
+          <strong className="text-white">{p.value.toLocaleString()}</strong>
         </div>
       ))}
     </div>

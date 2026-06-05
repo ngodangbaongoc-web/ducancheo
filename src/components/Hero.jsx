@@ -91,7 +91,7 @@ export default function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <a
-            href="#context"
+            href="#summary"
             className="inline-flex items-center gap-2 font-semibold px-8 py-3.5 rounded-xl transition-all text-sm shadow-lg"
             style={{ background: '#d0d09d', color: '#22372f', boxShadow: '0 8px 24px rgba(208,208,157,0.25)' }}
           >

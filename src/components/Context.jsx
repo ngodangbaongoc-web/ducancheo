@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { TrendingDown, Zap, Users, DollarSign, Star, Shield, BookOpen, Smartphone, Clock, Monitor } from 'lucide-react'
+import { TrendingDown, Zap, Users, DollarSign, Star, Shield, BookOpen, Smartphone, Clock, Monitor, Landmark } from 'lucide-react'
 import { SectionHeader, Reveal, GlassCard, stagger, scaleIn } from './ui'
 
 const challenges = [
@@ -53,8 +53,8 @@ export default function Context() {
           <div className="relative rounded-2xl overflow-hidden border border-white/8 bg-gradient-to-br from-white/5 to-transparent p-8 md:p-10">
             <div className="absolute top-0 right-0 w-64 h-64 bg-red-500/10 rounded-full blur-3xl pointer-events-none" />
             <div className="relative flex flex-col md:flex-row items-start md:items-center gap-8">
-              <div className="flex-shrink-0 w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-black shadow-lg" style={{ background: 'linear-gradient(135deg, #d0d09d, #0c1009)', color: '#0c1009' }}>
-                戲
+              <div className="flex-shrink-0 w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg" style={{ background: 'linear-gradient(135deg, #d0d09d, #0c1009)' }}>
+                <Landmark size={28} color="#0c1009" strokeWidth={2.5} />
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-bold text-white mb-2">Di sản văn hóa phi vật thể</h3>
