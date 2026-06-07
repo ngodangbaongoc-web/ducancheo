@@ -60,10 +60,10 @@ export default function Context() {
                 <h3 className="text-xl font-bold text-white mb-2">Di sản văn hóa phi vật thể</h3>
                 <p className="text-zinc-400 leading-relaxed">
                   Nghệ thuật chèo ra đời nhiều thế kỷ trước, đỉnh cao ở thế kỷ XVIII như vũ khí phản ánh mâu thuẫn xã hội phong kiến.
-                  Sự chuyển dịch từ{' '}
+                  Ngày nay, sự chuyển dịch từ{' '}
                   <span className="text-white font-semibold">sân đình, bến nước</span> sang{' '}
                   <span className="text-white font-semibold">nhà hát hộp khép kín</span>{' '}
-                  đặt chèo trước thách thức sinh tồn mang tính cấu trúc sâu sắc.
+                  đặt chèo trước những thách thức mang tính cấu trúc sâu sắc.
                 </p>
               </div>
             </div>
@@ -122,7 +122,7 @@ export default function Context() {
           <div className="flex items-center gap-2 shrink-0">
             <div className="w-0.5 h-5 rounded-full bg-blue-400" />
             <span className="text-xs font-black text-blue-400">1.2</span>
-            <span className="text-xs text-zinc-400 font-semibold uppercase tracking-wider">Tác Động Cách Mạng Công Nghiệp 4.0 & 5.0</span>
+            <span className="text-xs text-zinc-400 font-semibold uppercase tracking-wider">Tác Động Cách Mạng Công Nghiệp 4.0</span>
           </div>
           <div className="h-px flex-1 bg-white/5" />
         </div>
@@ -163,7 +163,7 @@ export default function Context() {
               <div>
                 <h4 className="text-white font-bold mb-2">Sân khấu truyền thống trong kỷ nguyên số</h4>
                 <p className="text-zinc-400 text-sm leading-relaxed">
-                  Trong kỷ nguyên 4.0–5.0, thách thức không phải là khán giả hết yêu nghệ thuật dân tộc —
+                  Trong kỷ nguyên số hóa, thách thức không phải là khán giả hết yêu nghệ thuật dân tộc —
                   mà là họ đang tìm kiếm nó theo những cách hoàn toàn khác: qua{' '}
                   <strong className="text-white">TikTok, YouTube, Spotify</strong> thay vì biển quảng cáo và tờ rơi.
                   Nhà hát nào số hóa trước, nhà hát đó giành được thế hệ khán giả tiếp theo.
