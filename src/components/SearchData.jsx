@@ -64,6 +64,20 @@ const compareArts = [
   { art: 'Tuồng',     vol: 8000,   pct: 7,   color: '#8B5CF6', note: 'Nhóm nhỏ nhất trong nghệ thuật cổ truyền' },
 ]
 
+const musicGenres = [
+  { genre: 'Pop',                    pct: 68.4, color: '#3B82F6' },
+  { genre: 'Ballad',                 pct: 60.9, color: '#8B5CF6' },
+  { genre: 'Rap',                    pct: 45.4, color: '#EF4444' },
+  { genre: 'R&B',                    pct: 41.2, color: '#F59E0B' },
+  { genre: 'EDM',                    pct: 40.3, color: '#10B981' },
+  { genre: 'Hip Hop',                pct: 34.8, color: '#06B6D4' },
+  { genre: 'Bolero',                 pct: 22.1, color: '#d0d09d' },
+  { genre: 'Rock',                   pct: 21.7, color: '#F97316' },
+  { genre: 'Nhạc cách mạng ★',      pct: 17.6, color: '#d0d09d' },
+  { genre: 'Nhạc dân ca truyền thống ★', pct: 15.1, color: '#d0d09d' },
+  { genre: 'Khác',                   pct: 3.8,  color: '#52525B' },
+]
+
 const compareTheaters = [
   { name: 'Nhà hát Tuổi Trẻ',   fans: 450000, pct: 100, color: '#EF4444', note: 'Dẫn đầu sân khấu kịch Việt Nam' },
   { name: 'Kịch Việt Nam',       fans: 55000,  pct: 12,  color: '#3B82F6', note: 'Đơn vị nghệ thuật quốc gia' },
@@ -145,6 +159,39 @@ export default function SearchData() {
                     <div className="text-zinc-600 text-[10px] mt-0.5">{a.note}</div>
                   </div>
                 ))}
+              </div>
+            </div>
+          </Reveal>
+
+          {/* Music genre chart */}
+          <Reveal delay={0.1}>
+            <div className="glass rounded-2xl p-7 h-full">
+              <h3 className="text-white font-bold text-base mb-1">Xu Hướng Chọn Thể Loại Âm Nhạc Hiện Nay</h3>
+              <p className="text-zinc-500 text-xs mb-5">Nguồn: Zing MP3 & Zing Media — % khán giả chọn thể loại yêu thích</p>
+              <div className="space-y-2.5">
+                {musicGenres.map((g, i) => (
+                  <div key={g.genre}>
+                    <div className="flex justify-between items-center mb-1">
+                      <span className={`text-sm font-semibold ${g.genre.includes('★') ? '' : 'text-white'}`} style={g.genre.includes('★') ? { color: '#d0d09d' } : {}}>
+                        {g.genre.replace(' ★', '')}
+                      </span>
+                      <span className="text-xs font-black tabular-nums" style={{ color: g.color }}>{g.pct}%</span>
+                    </div>
+                    <div className="h-1.5 rounded-full bg-white/5 overflow-hidden">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${g.pct}%` }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.7, delay: i * 0.05 }}
+                        className="h-full rounded-full"
+                        style={{ background: g.color + (g.genre.includes('★') ? 'FF' : 'BB') }}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 pt-4 border-t border-white/5 text-zinc-600 text-[10px] leading-relaxed">
+                ★ Nhạc cách mạng & dân ca truyền thống — phân khúc khán giả Nhà hát có thể khai thác trực tiếp
               </div>
             </div>
           </Reveal>
