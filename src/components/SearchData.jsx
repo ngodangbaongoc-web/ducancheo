@@ -134,40 +134,11 @@ export default function SearchData() {
 
         {/* Comparative Analysis */}
         <div className="grid md:grid-cols-2 gap-5 mb-10">
-          {/* Search volume comparison */}
+          {/* Music genre chart */}
           <Reveal>
             <div className="glass rounded-2xl p-7 h-full">
-              <h3 className="text-white font-bold text-base mb-1">Lượt Tìm Kiếm Theo Loại Hình Nghệ Thuật</h3>
-              <p className="text-zinc-500 text-xs mb-5">Google Keyword Stats, tháng 3/2025–2/2026 (lượt/tháng)</p>
-              <div className="space-y-3">
-                {compareArts.map(a => (
-                  <div key={a.art}>
-                    <div className="flex justify-between items-center mb-1">
-                      <span className="text-sm font-semibold" style={{ color: a.art.includes('★') ? '#d0d09d' : 'white' }}>{a.art}</span>
-                      <span className="text-xs font-black" style={{ color: a.color }}>{a.vol.toLocaleString()}</span>
-                    </div>
-                    <div className="h-1.5 rounded-full bg-white/5 overflow-hidden">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${a.pct}%` }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8, delay: 0.1 }}
-                        className="h-full rounded-full"
-                        style={{ background: a.color + (a.art.includes('★') ? 'FF' : '99') }}
-                      />
-                    </div>
-                    <div className="text-zinc-600 text-[10px] mt-0.5">{a.note}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </Reveal>
-
-          {/* Music genre chart */}
-          <Reveal delay={0.1}>
-            <div className="glass rounded-2xl p-7 h-full">
               <h3 className="text-white font-bold text-base mb-1">Xu Hướng Chọn Thể Loại Âm Nhạc Hiện Nay</h3>
-              <p className="text-zinc-500 text-xs mb-5">Nguồn: Zing MP3 & Zing Media — % khán giả chọn thể loại yêu thích</p>
+              <p className="text-zinc-500 text-xs mb-5">Nguồn: Báo cáo từ RMIT University, dữ liệu ZingMP3 — % khán giả chọn thể loại yêu thích</p>
               <div className="space-y-2.5">
                 {musicGenres.map((g, i) => (
                   <div key={g.genre}>
@@ -192,6 +163,35 @@ export default function SearchData() {
               </div>
               <div className="mt-4 pt-4 border-t border-white/5 text-zinc-600 text-[10px] leading-relaxed">
                 ★ Nhạc cách mạng & dân ca truyền thống — phân khúc khán giả Nhà hát có thể khai thác trực tiếp
+              </div>
+            </div>
+          </Reveal>
+
+          {/* Search volume comparison */}
+          <Reveal delay={0.1}>
+            <div className="glass rounded-2xl p-7 h-full">
+              <h3 className="text-white font-bold text-base mb-1">Lượt Tìm Kiếm Theo Loại Hình Nghệ Thuật</h3>
+              <p className="text-zinc-500 text-xs mb-5">Google Keyword Stats, tháng 3/2025–2/2026 (lượt/tháng)</p>
+              <div className="space-y-3">
+                {compareArts.map(a => (
+                  <div key={a.art}>
+                    <div className="flex justify-between items-center mb-1">
+                      <span className="text-sm font-semibold" style={{ color: a.art.includes('★') ? '#d0d09d' : 'white' }}>{a.art}</span>
+                      <span className="text-xs font-black" style={{ color: a.color }}>{a.vol.toLocaleString()}</span>
+                    </div>
+                    <div className="h-1.5 rounded-full bg-white/5 overflow-hidden">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${a.pct}%` }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.1 }}
+                        className="h-full rounded-full"
+                        style={{ background: a.color + (a.art.includes('★') ? 'FF' : '99') }}
+                      />
+                    </div>
+                    <div className="text-zinc-600 text-[10px] mt-0.5">{a.note}</div>
+                  </div>
+                ))}
               </div>
             </div>
           </Reveal>
