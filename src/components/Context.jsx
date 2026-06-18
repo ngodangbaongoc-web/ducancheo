@@ -163,10 +163,9 @@ export default function Context() {
               <div>
                 <h4 className="text-white font-bold mb-2">Sân khấu truyền thống trong kỷ nguyên số</h4>
                 <p className="text-zinc-400 text-sm leading-relaxed">
-                  Trong kỷ nguyên số hóa, thách thức không phải là khán giả hết yêu nghệ thuật dân tộc —
-                  mà là họ đang tìm kiếm nó theo những cách hoàn toàn khác: qua{' '}
-                  <strong className="text-white">TikTok, YouTube, Spotify</strong> thay vì biển quảng cáo và tờ rơi.
-                  Nhà hát nào số hóa trước, nhà hát đó giành được thế hệ khán giả tiếp theo.
+                  Trong kỷ nguyên số hóa, thách thức không nằm ở khán giả hết yêu nghệ thuật truyền thống
+                  mà là <strong className="text-white">"sự mới"</strong> trong cách tiếp cận.
+                  Bối cảnh này đặt ra rằng: Đơn vị nào số hóa trước, đơn vị đó giành ưu thế.
                 </p>
               </div>
             </div>

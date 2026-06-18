@@ -302,7 +302,7 @@ export default function SearchData() {
             <div className="px-6 py-4 border-b border-white/5 flex items-center gap-2">
               <Search size={16} style={{ color: '#d0d09d' }} />
               <h3 className="text-white font-bold">Bảng dữ liệu đầy đủ — Google Keyword Stats</h3>
-              <span className="ml-2 text-xs text-zinc-500">Nguồn: 01/03/2025 – 28/02/2026</span>
+              <span className="ml-2 text-xs text-zinc-500">Dữ liệu tìm kiếm về từ khóa "chèo" trên Google trong thời gian Nguồn: 01/03/2025 – 28/02/2026</span>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">

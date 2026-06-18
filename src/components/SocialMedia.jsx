@@ -125,12 +125,12 @@ export default function SocialMedia() {
             <div className="rounded-2xl p-7 bg-gradient-to-br from-emerald-950/40 to-transparent border border-emerald-500/20 h-full">
               <div className="flex items-center gap-2 mb-3">
                 <Video size={20} className="text-emerald-400" />
-                <h4 className="text-emerald-400 font-bold text-base">Nội dung hậu trường thắng thế</h4>
+                <h4 className="text-emerald-400 font-bold text-base">Nội dung hậu trường thu hút sự quan tâm.</h4>
               </div>
               <p className="text-zinc-400 text-sm leading-relaxed">
-                Video tập luyện "live mộc" không autotune thu{' '}
-                <strong className="text-white">2.262 reactions, 83 shares</strong> — cao hơn nhiều các bài thông báo hành chính.
-                Công chúng khao khát sự chân thực và nỗ lực của người nghệ sĩ phía sau ánh đèn sân khấu.
+                Video tập luyện "live mộc", không autotune thu hút{' '}
+                <strong className="text-white">2.262 reactions, 83 shares</strong>, cao hơn nhiều so với những bài thông báo hành chính thông thường.
+                Điều này cho thấy công chúng quan tâm sự chân thực, gần gũi, sự nỗ lực của người nghệ sĩ sau ánh đèn.
               </p>
             </div>
           </Reveal>

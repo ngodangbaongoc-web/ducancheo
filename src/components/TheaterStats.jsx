@@ -25,11 +25,35 @@ const stats = [
 ]
 
 const milestones = [
-  { year: '2010', event: 'Nâng cấp & phục dựng', detail: 'Hơn 20 chương trình & vở diễn lớn', hex: '#d0d09d' },
-  { year: '2024', event: 'NSND Vũ Tự Long lên Giám đốc', detail: 'Bổ nhiệm tháng 12/2024', hex: '#EF4444' },
-  { year: '2025', event: 'Liên hoan QT Thử nghiệm', detail: 'Giải Dàn nhạc xuất sắc + 4 giải cá nhân', hex: '#10B981' },
-  { year: '2025', event: 'Vở "Chuyện làng"', detail: 'Tác phẩm đương đại mang tính thời sự', hex: '#8B5CF6' },
-  { year: '2025', event: '"Những người thắp lửa"', detail: 'Tham gia Liên hoan Chèo toàn quốc', hex: '#3B82F6' },
+  {
+    decade: 'Thập niên 1950',
+    label: 'Bước khởi đầu',
+    hex: '#d0d09d',
+    events: [
+      { year: '01/10/1954', event: 'Thành lập Đội văn công', detail: 'Thuộc Cục Chính trị - Tổng cục Cung cấp tại Thái Nguyên — tiền thân sơ khai của Nhà hát.' },
+      { year: '1954–1975', event: '"Tiếng hát át tiếng bom"', detail: 'Lưu diễn phục vụ bộ đội và thanh niên xung phong khắp tuyến đường Trường Sơn.' },
+    ],
+  },
+  {
+    decade: 'Thập niên 2010',
+    label: 'Đổi mới & Nâng cấp',
+    hex: '#3B82F6',
+    events: [
+      { year: '2010', event: 'Nâng cấp & đổi tên', detail: 'Chính thức trở thành Nhà hát Chèo Quân đội từ Đoàn Chèo Tổng cục Hậu cần.' },
+      { year: '2013', event: '"Sáng trong như ngọc một con người"', detail: 'Công diễn tại Nhà hát Lớn Hà Nội, phục vụ lãnh đạo cấp cao của Đảng và Nhà nước.' },
+      { year: '2014', event: 'Huân chương Bảo vệ Tổ quốc hạng Ba', detail: 'Kỷ niệm 60 năm ngày truyền thống — đã dựng thành công gần 100 vở diễn.' },
+      { year: '2019', event: 'Huân chương Bảo vệ Tổ quốc hạng Nhì', detail: 'Gặp mặt kỷ niệm 65 năm Ngày truyền thống Nhà hát.' },
+    ],
+  },
+  {
+    decade: 'Thập niên 2020',
+    label: 'Khẳng định vị thế',
+    hex: '#10B981',
+    events: [
+      { year: '2020', event: '"Hai mươi năm hận thù"', detail: 'Công diễn tại Trung tâm Nghệ thuật Âu Cơ — tiếp cận khán giả hiện đại.' },
+      { year: '2024', event: 'Kỷ niệm 70 năm thành lập', detail: 'Chuỗi chương trình nghệ thuật đặc sắc chào mừng 70 năm ngày truyền thống.' },
+    ],
+  },
 ]
 
 export default function TheaterStats() {
@@ -80,66 +104,56 @@ export default function TheaterStats() {
           ))}
         </motion.div>
 
-        {/* Horizontal roadmap */}
+        {/* Decade timeline */}
         <Reveal>
           <div className="glass rounded-2xl p-8 mb-10">
-            <div className="flex items-center gap-2.5 mb-10">
+            <div className="flex items-center gap-2.5 mb-8">
               <Calendar size={18} className="text-blue-400" />
               <h3 className="text-white font-bold text-lg">Mốc Thành Tựu Nổi Bật</h3>
-              <span className="text-zinc-600 text-sm">— Lịch sử phát triển giai đoạn hiện đại</span>
+              <span className="text-zinc-600 text-sm">— Lịch sử phát triển qua các thập niên</span>
             </div>
 
-            <div className="relative">
-              {/* Connecting line through dots */}
-              <div
-                className="absolute h-px pointer-events-none"
-                style={{
-                  top: '20px',
-                  left: '10%',
-                  right: '10%',
-                  background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.12) 15%, rgba(255,255,255,0.12) 85%, transparent)',
-                }}
-              />
+            <div className="grid md:grid-cols-3 gap-5">
+              {milestones.map((decade, di) => (
+                <motion.div
+                  key={decade.decade}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: di * 0.12, ease: [0.16, 1, 0.3, 1] }}
+                  className="rounded-xl overflow-hidden"
+                  style={{ background: decade.hex + '08', border: `1px solid ${decade.hex}25` }}
+                >
+                  {/* Decade header */}
+                  <div className="px-5 py-3.5 border-b" style={{ borderColor: decade.hex + '20', background: decade.hex + '12' }}>
+                    <div className="text-[10px] font-black uppercase tracking-widest mb-0.5" style={{ color: decade.hex }}>{decade.decade}</div>
+                    <div className="text-white font-bold text-sm">{decade.label}</div>
+                  </div>
 
-              <div className="flex gap-4">
-                {milestones.map((m, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, y: 24 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                    className="flex flex-col items-center flex-1 gap-4 min-w-0"
-                  >
-                    {/* Dot */}
-                    <div
-                      className="relative z-10 w-10 h-10 rounded-full flex items-center justify-center shrink-0"
-                      style={{ background: m.hex + '18', border: `2px solid ${m.hex}55` }}
-                    >
-                      <div
-                        className="w-3 h-3 rounded-full"
-                        style={{ background: m.hex, boxShadow: `0 0 10px ${m.hex}80` }}
-                      />
-                    </div>
-
-                    {/* Card */}
-                    <motion.div
-                      whileHover={{ scale: 1.04 }}
-                      className="w-full rounded-xl p-3.5 text-center cursor-default transition-all"
-                      style={{ background: m.hex + '0D', border: `1px solid ${m.hex}28` }}
-                    >
-                      <div
-                        className="text-[10px] font-black uppercase tracking-widest mb-1.5"
-                        style={{ color: m.hex }}
+                  {/* Events */}
+                  <div className="p-4 space-y-4">
+                    {decade.events.map((ev, ei) => (
+                      <motion.div
+                        key={ei}
+                        initial={{ opacity: 0, x: -8 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: di * 0.12 + ei * 0.07 }}
+                        className="flex gap-3"
                       >
-                        {m.year}
-                      </div>
-                      <div className="text-white font-semibold text-xs mb-1 leading-snug">{m.event}</div>
-                      <div className="text-zinc-500 text-[10px] leading-relaxed">{m.detail}</div>
-                    </motion.div>
-                  </motion.div>
-                ))}
-              </div>
+                        <div className="mt-1.5 shrink-0">
+                          <div className="w-2 h-2 rounded-full" style={{ background: decade.hex, boxShadow: `0 0 6px ${decade.hex}80` }} />
+                        </div>
+                        <div>
+                          <div className="text-[10px] font-black tracking-wider mb-0.5" style={{ color: decade.hex }}>{ev.year}</div>
+                          <div className="text-white font-semibold text-xs mb-0.5 leading-snug">{ev.event}</div>
+                          <div className="text-zinc-500 text-[10px] leading-relaxed">{ev.detail}</div>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </Reveal>
