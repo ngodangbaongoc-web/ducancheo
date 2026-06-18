@@ -1,12 +1,11 @@
 import { motion } from 'framer-motion'
-import { TrendingDown, Zap, Users, DollarSign, Star, Shield, BookOpen, Smartphone, Clock, Monitor, Landmark } from 'lucide-react'
+import { TrendingDown, Zap, Users, Star, Shield, BookOpen, Smartphone, Clock, Monitor, Landmark } from 'lucide-react'
 import { SectionHeader, Reveal, GlassCard, stagger, scaleIn } from './ui'
 
 const challenges = [
   { icon: TrendingDown, title: 'Suy giảm quy mô', desc: 'Đoàn chèo chuyên nghiệp toàn quốc còn dưới 20 đoàn. Nhiều đơn vị phải sáp nhập để tồn tại.', color: 'text-red-400', border: 'border-red-500/20', glow: 'rgba(239,68,68,0.15)' },
   { icon: Zap,          title: 'Cạnh tranh số hóa', desc: 'Nhạc trẻ, điện ảnh, hài kịch và nền tảng kỹ thuật số chiếm lĩnh thị phần giải trí hiện đại.', color: 'text-orange-400', border: 'border-orange-500/20', glow: 'rgba(249,115,22,0.15)' },
-  { icon: Users,        title: 'Đứt gãy thế hệ', desc: 'Khán giả trung thành chủ yếu là người cao tuổi. Thế hệ trẻ xa lánh nghệ thuật truyền thống.', color: 'text-[#d0d09d]', border: 'border-[#d0d09d]/20', glow: 'rgba(208,208,157,0.15)' },
-  { icon: DollarSign,   title: 'Áp lực tài chính', desc: 'Chuyển từ bao cấp sang tự chủ tài chính, ngân sách hạn hẹp khiến đầu tư tác phẩm lớn gặp khó.', color: 'text-violet-400', border: 'border-violet-500/20', glow: 'rgba(139,92,246,0.15)' },
+  { icon: Users,        title: 'Đứt gãy thế hệ', desc: 'Sự phân hóa rõ rệt khi tệp khán giả trung thành tập trung chủ yếu ở nhóm người cao tuổi, trong khi mức độ tiếp cận và khả năng duy trì kết nối đối với thế hệ trẻ còn nhiều hạn chế, tạo ra khoảng trống lớn trong việc kế thừa lực lượng khán giả tương lai.', color: 'text-[#d0d09d]', border: 'border-[#d0d09d]/20', glow: 'rgba(208,208,157,0.15)' },
 ]
 
 const positions = [
@@ -23,7 +22,7 @@ const digitalStats = [
 
 export default function Context() {
   return (
-    <section id="part1" className="py-28 px-6">
+    <section id="part1" className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* Part header */}
@@ -76,7 +75,7 @@ export default function Context() {
           whileInView="visible"
           viewport={{ once: true, margin: '-60px' }}
           variants={stagger}
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12"
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12"
         >
           {challenges.map(c => (
             <GlassCard key={c.title} glowColor={c.glow} className={`p-6 border ${c.border}`}>

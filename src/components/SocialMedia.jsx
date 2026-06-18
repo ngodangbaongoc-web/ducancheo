@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend, CartesianGrid } from 'recharts'
 import { Heart, MessageCircle, Share2, Flame, Video, Mic2, BookOpen, Megaphone, Ticket, Star, ArrowRight } from 'lucide-react'
-import { SectionHeader, Reveal, stagger, scaleIn } from './ui'
+import { SectionHeader, Reveal, scaleIn } from './ui'
 
 const posts = [
   { title: 'Tuyển sinh năng khiếu & Teaser minigame', date: '08/03/2026', reactions: 4899, comments: 26, shares: 24, insight: 'Khán giả trẻ quan tâm đặc biệt đến cơ hội học nghệ thuật và hoạt động nhận quà.', type: 'viral', Icon: Flame },
@@ -43,7 +43,7 @@ const CustomTooltip = ({ active, payload }) => {
 
 export default function SocialMedia() {
   return (
-    <section id="social" className="py-28 px-6">
+    <section id="social" className="pt-8 pb-10 px-6">
       <div className="max-w-7xl mx-auto">
         <SectionHeader
           eyebrow="Mạng xã hội"

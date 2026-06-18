@@ -14,7 +14,7 @@ const segments = [
     habit: 'Xem trực tiếp tại sân đình, lễ hội, rạp hát',
     paying: 'Trung bình thấp', loyalty: 'Tuyệt đối',
     persona: 'Bác Minh, 65 tuổi, cựu chiến binh',
-    radar: [90, 30, 20, 85, 95],
+    radar: [20, 30, 20, 85, 95],
   },
   {
     id: 'young', label: 'Khán giả trẻ', age: 'Dưới 30 tuổi',
@@ -25,7 +25,7 @@ const segments = [
     habit: 'Clip ngắn online, workshop tương tác quy mô nhỏ',
     paying: '~300K/vé workshop', loyalty: 'Tiềm năng cao',
     persona: 'Khánh Linh, 21 tuổi, sinh viên KHXH',
-    radar: [20, 90, 75, 40, 60],
+    radar: [100, 90, 75, 40, 60],
   },
   {
     id: 'military', label: 'Khán giả Quân đội', age: 'Mọi lứa tuổi',
@@ -57,7 +57,7 @@ export default function AudienceSegments() {
   const radarData = axes.map((a, i) => ({ subject: a, value: seg.radar[i] }))
 
   return (
-    <section id="part2" className="py-28 px-6">
+    <section id="part2" className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* Part header */}

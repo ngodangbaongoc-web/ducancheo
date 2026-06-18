@@ -1,18 +1,18 @@
 import { motion } from 'framer-motion'
-import { Music2, Smartphone, Ticket, Sparkles, CheckCircle2, AlertTriangle, Lightbulb } from 'lucide-react'
-import { SectionHeader, Reveal, stagger, scaleIn } from './ui'
+import { Music2, Smartphone, Ticket } from 'lucide-react'
+import { SectionHeader, Reveal, scaleIn } from './ui'
 
 const recommendations = [
   { Icon: Music2,    title: 'Số hóa tài nguyên âm nhạc',  color: '#3B82F6', border: 'border-blue-500/20',    bg: 'from-blue-950/30',    priority: '01', desc: 'Phát hành album mp3 chèo cổ + backing track karaoke trên Spotify, Zing MP3, YouTube — đáp ứng nhu cầu tìm kiếm tăng ∞.' },
-  { Icon: Smartphone, title: 'Tối ưu hóa điểm chạm số',   color: '#d0d09d', border: 'border-[#d0d09d]/20',   bg: 'from-[#d0d09d]/8',   priority: '02', desc: 'Kênh TikTok chính thức với micro-content 30-60s. Chiến dịch "Duet cùng NSND Tự Long" khai thác lượng follower khổng lồ.' },
-  { Icon: Ticket,    title: 'Chuyển hóa O2O',              color: '#10B981', border: 'border-emerald-500/20', bg: 'from-emerald-950/30', priority: '03', desc: 'Tích hợp TicketGO/Ticketbox + workshop "Chiếu chèo mở" + không gian check-in vật lý để tạo vòng lặp lan tỏa tự nhiên.' },
+  { Icon: Smartphone, title: 'Tối ưu hóa điểm chạm số',   color: '#d0d09d', border: 'border-[#d0d09d]/20',   bg: 'from-[#d0d09d]/8',   priority: '02', desc: 'Hệ sinh thái số của Nhà hát được vận hành tập trung trên các nền tảng Website, Fanpage, YouTube và TikTok. Trong đó, kênh TikTok chính thức sẽ ưu tiên các định dạng nội dung ngắn từ 30 đến 60 giây nhằm tối ưu hóa khả năng tiếp cận nhóm công chúng trẻ. Chiến dịch trọng điểm "Duet cùng NSND Tự Long" được triển khai nhằm khai thác tệp người theo dõi sẵn có của nghệ sĩ, tạo hiệu ứng lan tỏa tự nhiên và gia tăng mức độ nhận diện thương hiệu trên không gian số.' },
+  { Icon: Ticket,    title: 'Chuyển hóa O2O',              color: '#10B981', border: 'border-emerald-500/20', bg: 'from-emerald-950/30', priority: '03', desc: 'Chiến lược đồng bộ hóa giải pháp công nghệ và không gian vật lý nhằm tạo vòng lặp lan tỏa tự nhiên. Chiến lược mở rộng và hiện thực hóa trải nghiệm nhằm tăng tương tác, giúp công chúng trải nghiệm nghệ thuật nguyên bản và kết nối với nghệ sĩ. Không gian check-in tại thực địa sẽ kích thích khán giả chia sẻ nội dung tự tạo lên mạng xã hội, chuyển dịch hiệu quả nhận thức trực tuyến thành hành vi đến rạp.' },
 ]
 
 const hashtags = ['#ChèoQuânĐội', '#DigitalFirst', '#OmnichannelArts', '#TrẻHóaKhánGiả', '#DiSảnSống']
 
 export default function Conclusion() {
   return (
-    <section id="part5" className="py-28 px-6">
+    <section id="part5" className="py-20 px-6">
       <div className="max-w-5xl mx-auto">
         <div className="h-px bg-gradient-to-r from-transparent via-red-500/40 to-transparent mb-20" />
 
@@ -24,7 +24,7 @@ export default function Conclusion() {
 
         <SectionHeader
           eyebrow="Kết luận & Kiến nghị"
-          title="Lối Thoát Cho Sân Khấu Chèo"
+          title="Phương Hướng Khắc Phục Hạn Chế Và Phát Triển Sân Khấu Chèo Trong Bối Cảnh Số"
         />
 
         {/* Main quote */}
@@ -39,16 +39,10 @@ export default function Conclusion() {
                 <span className="text-emerald-400 text-xs font-semibold uppercase tracking-wider">Kết luận nghiên cứu</span>
               </div>
               <p className="text-zinc-300 text-lg leading-relaxed mb-4">
-                Nghệ thuật chèo đang đối mặt với khủng hoảng cấu trúc, nhưng{' '}
-                <strong style={{ color: '#d0d09d' }}>dữ liệu Internet Listening chứng minh sự quan tâm của công chúng vẫn rất mạnh mẽ</strong>.
-                Lối thoát không nằm ở cách tân hời hợt, mà nằm ở việc{' '}
-                <strong className="text-white">thay đổi tư duy tiếp cận khán giả</strong> —
-                từ thụ động sang chủ động, từ một chiều sang omnichannel.
+                Mặc dù nghệ thuật chèo đang đối mặt với những thách thức mang tính cấu trúc, số liệu từ các công cụ lắng nghe trực tuyến (Social Listening) cho thấy mức độ quan tâm của công chúng đối với loại hình này vẫn được duy trì ổn định. Do đó, định hướng phát triển không nằm ở những thay đổi hình thức mang tính bề nổi, mà đòi hỏi một sự chuyển dịch căn bản trong tư duy tiếp cận khán giả: từ phương thức thụ động sang chủ động, và từ tương tác đơn kênh sang đa kênh tích hợp (Omnichannel).
               </p>
               <p className="text-zinc-400 leading-relaxed">
-                Nhà hát Chèo Quân đội, với vị thế đặc thù và lực lượng nghệ sĩ tinh hoa, cần đi đầu xây dựng
-                hệ sinh thái tiếp cận đa kênh tích hợp — số hóa tài nguyên, tối ưu hóa điểm chạm trực tuyến,
-                và chuyển hóa hành vi thưởng thức qua mô hình O2O.
+                Với vị thế đặc thù và nền tảng lực lượng nhân sự chuyên môn cao, Nhà hát Chèo Quân đội sở hữu những điều kiện tiên quyết để tiên phong xây dựng một hệ sinh thái tiếp cận đa thành phần. Chiến lược này bao gồm việc số hóa hệ tài nguyên nghệ thuật hiện có, tối ưu hóa các điểm chạm trên không gian mạng, và ứng dụng mô hình O2O (Online-to-Offline) nhằm chuyển hóa hiệu quả tương tác trực tuyến thành hành vi thưởng thức trực tiếp tại rạp.
               </p>
             </div>
           </div>
@@ -125,35 +119,6 @@ export default function Conclusion() {
                   </motion.span>
                 ))}
               </div>
-            </div>
-          </div>
-        </Reveal>
-
-        {/* Recommendations */}
-        <Reveal className="mb-10">
-          <div className="rounded-2xl overflow-hidden border border-[#d0d09d]/20 bg-gradient-to-br from-[#d0d09d]/6 to-transparent">
-            <div className="flex items-center gap-2 px-7 py-5 border-b border-white/5">
-              <Lightbulb size={16} style={{ color: '#d0d09d' }} />
-              <h3 className="text-white font-bold text-lg">Kiến Nghị Thực Tiễn</h3>
-              <span className="text-zinc-500 text-sm ml-1">— Góc nhìn của người tư vấn</span>
-            </div>
-            <div className="p-7 grid md:grid-cols-2 gap-4">
-              {[
-                { icon: CheckCircle2, color: '#10B981', title: 'Bắt đầu từ "quick wins" đo lường được', desc: 'Trong 30 ngày đầu: quay 5 video hậu trường, đăng TikTok và theo dõi engagement. Chi phí gần bằng 0 nhưng dữ liệu thu về cực kỳ có giá trị.' },
-                { icon: CheckCircle2, color: '#3B82F6', title: 'Ưu tiên nhân sự content chuyên biệt', desc: 'Không thể giao nội dung số như "việc phụ" cho nhân viên hành chính. Cần ít nhất 1 người phụ trách full-time: quay, dựng, đăng, phân tích số liệu.' },
-                { icon: AlertTriangle, color: '#d0d09d', title: 'Không cách tân khi chưa có nền tảng số', desc: 'Tránh đầu tư vào sân khấu hoành tráng trước khi xây dựng kênh phân phối số. Khán giả phải "tìm được" Nhà hát trước khi đến rạp.' },
-                { icon: AlertTriangle, color: '#EF4444', title: 'Đo lường liên tục — không làm theo cảm tính', desc: 'Đặt KPI cụ thể cho từng chiến dịch (reach, conversion, revenue). Nếu sau 60 ngày một kênh không hiệu quả, chuyển nguồn lực sang kênh khác — không bám víu.' },
-              ].map(r => (
-                <div key={r.title} className="glass rounded-xl p-5 border border-white/8">
-                  <div className="flex items-start gap-3">
-                    <r.icon size={16} className="shrink-0 mt-0.5" style={{ color: r.color }} />
-                    <div>
-                      <div className="text-white font-bold text-sm mb-1">{r.title}</div>
-                      <p className="text-zinc-400 text-xs leading-relaxed">{r.desc}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </Reveal>

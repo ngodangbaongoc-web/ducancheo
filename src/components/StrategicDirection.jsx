@@ -54,7 +54,7 @@ const phases = [
 
 export default function StrategicDirection() {
   return (
-    <section id="part3" className="py-28 px-6 relative">
+    <section id="part3" className="pt-12 pb-20 px-6 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a2218]/40 to-transparent pointer-events-none" />
       <div className="max-w-7xl mx-auto relative">
 
@@ -68,20 +68,21 @@ export default function StrategicDirection() {
           eyebrow="Định hướng chiến lược"
           title="Định Hướng Chiến Lược Và Lộ Trình Mục Tiêu"
           subtitle="Chiến lược này được xây dựng dựa trên cơ sở phân tích thực trạng thách thức nội tại (Phần 1) và số liệu nghiên cứu phân khúc khán giả (Phần 2), nhằm đảm bảo tính thực tiễn và khả năng ứng dụng cao cho đơn vị: Phác thảo ma trận SWOT dựa trên các phân tích trên; Xây dựng khung lộ trình phân kỳ mục tiêu 3 giai đoạn; Đề xuất các chỉ số đo lường hiệu suất KPI phù hợp."
+          subtitleClassName="max-w-4xl text-justify"
         />
 
         {/* 3.1 North Star */}
         <Reveal className="mb-10">
           <div className="relative rounded-2xl overflow-hidden border border-[#d0d09d]/20 p-8 md:p-10">
             <div className="absolute inset-0 bg-gradient-to-br from-[#d0d09d]/8 via-transparent to-emerald-950/20" />
-            <div className="relative text-center">
+            <div className="relative text-center max-w-6xl mx-auto">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-5 text-xs font-bold uppercase tracking-widest" style={{ background: 'rgba(208,208,157,0.12)', color: '#d0d09d', border: '1px solid rgba(208,208,157,0.2)' }}>
                 <Target size={12} /> 3.1 — Mục tiêu chiến lược
               </div>
               <h3 className="text-2xl md:text-3xl font-black text-white mb-3">
                 Phương châm chiến lược: "Phát triển bền vững — Ưu tiên nền tảng số"
               </h3>
-              <p className="text-zinc-300 max-w-2xl mx-auto leading-relaxed mb-6">
+              <p className="text-zinc-300 max-w-4xl mx-auto leading-relaxed mb-6">
                 Chiến lược định hướng hạn chế các giải pháp ngắn hạn mang tính cục bộ, tập trung vào mục tiêu xây dựng{' '}
                 <strong className="text-white">hệ sinh thái số bền vững</strong>. Lộ trình này hướng tới việc chuyển hóa tài nguyên nghệ thuật truyền thống thành các định dạng nội dung số tối ưu khả năng tiếp cận, đồng thời ứng dụng mô hình{' '}
                 <strong className="text-white">O2O (Online-to-Offline)</strong> để chuyển đổi hiệu quả lượng tương tác trực tuyến thành khán giả trực tiếp tại rạp.

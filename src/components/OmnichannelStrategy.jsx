@@ -11,8 +11,8 @@ const strategies = [
     actions: [
       { Icon: Shield, title: 'Điểm mạnh (Strengths)', detail: 'Lực lượng nghệ sĩ tinh hoa (9 NSND, 27 NSƯT). Danh tiếng của Giám đốc — Đại tá, NSND Vũ Tự Long. Quy mô lớn và vị thế chính trị vững chắc.' },
       { Icon: AlertTriangle, title: 'Điểm yếu (Weaknesses)', detail: 'Phụ thuộc kênh truyền thông một chiều. Thiếu thư viện nội dung số. Quy trình bán vé thủ công. Thiếu không gian tương tác với khán giả trẻ.' },
-      { Icon: Sparkles, title: 'Cơ hội (Opportunities)', detail: 'Lượng tìm kiếm "chèo" duy trì hơn 50.000 lượt/tháng — nhu cầu công chúng còn đó nhưng chưa được đáp ứng. Sự xuất hiện của NSND Vũ Tự Long trong "Anh trai vượt ngàn chông gai" mở ra cơ hội tiếp cận Gen Z quy mô lớn. Làn sóng phục hưng văn hóa truyền thống đang nổi lên trong giới trẻ.' },
-      { Icon: Zap, title: 'Thách thức (Threats)', detail: 'Cạnh tranh từ giải trí hiện đại: streaming, K-pop, gaming chiếm đa số thời gian rảnh của giới trẻ. Cơ sở khán giả truyền thống già hóa trong khi chưa có chiến lược thu hút thế hệ kế tiếp. Áp lực tự chủ tài chính hạn chế ngân sách đầu tư nội dung số.' },
+      { Icon: Sparkles, title: 'Cơ hội (Opportunities)', detail: 'Lượng tìm kiếm "chèo" duy trì hơn 50.000 lượt/tháng — nhu cầu công chúng còn đó nhưng chưa được đáp ứng. Sự xuất hiện của NSND Vũ Tự Long trong "Anh trai vượt ngàn chông gai" mở ra cơ hội tiếp cận Gen Z quy mô lớn. Làn sóng phục hưng văn hóa truyền thống đang nổi lên trong giới trẻ, cùng sự phát triển của TikTok, YouTube Shorts và các nền tảng nội dung ngắn tạo điều kiện để Nhà hát tái đóng gói chất liệu chèo thành các điểm chạm dễ tiếp cận. Ngoài ra, xu hướng trải nghiệm văn hóa bản địa, workshop nghệ thuật và du lịch văn hóa tại đô thị mở ra dư địa phát triển mô hình O2O có khả năng chuyển hóa tương tác trực tuyến thành khán giả trực tiếp.' },
+      { Icon: Zap, title: 'Thách thức (Threats)', detail: 'Cạnh tranh từ giải trí hiện đại: streaming, K-pop, gaming chiếm đa số thời gian rảnh của giới trẻ. Cơ sở khán giả truyền thống già hóa trong khi chưa có chiến lược thu hút thế hệ kế tiếp. Áp lực tự chủ tài chính hạn chế ngân sách đầu tư nội dung số. Bên cạnh đó, thuật toán nền tảng số thay đổi liên tục, chi phí duy trì nội dung chất lượng cao ngày càng tăng và thói quen tiêu thụ nội dung ngắn khiến các giá trị nghệ thuật truyền thống cần được diễn giải tinh gọn, hấp dẫn nhưng vẫn bảo toàn bản sắc.' },
     ],
     kpis: ['Số hóa hệ sinh thái nội dung', 'Trẻ hóa đề tài đại chúng', 'Cá nhân hóa trải nghiệm O2O'],
   },
@@ -22,9 +22,9 @@ const strategies = [
     desc: 'Website của Nhà hát không chỉ là trang tin mà phải là một trung tâm dữ liệu thông minh (Smart Hub) phục vụ cả khán giả cá nhân lẫn đối tác doanh nghiệp.',
     actions: [
       { Icon: Star, title: 'Phân khúc B2B & Minh bạch hóa', detail: 'Xây dựng chuyên mục riêng cho đối tác thuê đoàn diễn: hồ sơ năng lực, danh mục vở diễn, thông số kỹ thuật sân khấu và form đăng ký hợp tác nhanh. Hệ thống hóa toàn bộ lịch sử, thành tích, danh hiệu và thư viện vở diễn để tạo niềm tin tuyệt đối.' },
-      { Icon: Zap, title: 'Tích hợp AI Chatbot 24/7', detail: 'Sử dụng chatbot AI trên website để giải đáp thắc mắc về lịch diễn, tư vấn vở diễn phù hợp và hỗ trợ đặt vé tự động 24/7 — nâng cao trải nghiệm người dùng và tối ưu chuyển đổi.' },
+      { Icon: Zap, title: 'Tích hợp AI Chatbot 24/7', detail: 'Sử dụng chatbot AI trên website để giải đáp thắc mắc về lịch diễn, tư vấn vở diễn phù hợp và hỗ trợ thông tin 24/7 — nâng cao trải nghiệm người dùng và tối ưu chuyển đổi.' },
     ],
-    kpis: ['Tối ưu doanh thu thương mại B2B', 'Tạo niềm tin cho công chúng & nhà tài trợ', 'Đặt vé tự động 24/7'],
+    kpis: ['Tối ưu doanh thu thương mại B2B', 'Tạo niềm tin cho công chúng & nhà tài trợ'],
   },
   {
     id: 'pr', num: '03', Icon: Mic2, color: '#EF4444', border: 'border-red-500/20', bg: 'from-red-950/30',
@@ -62,7 +62,7 @@ const funnelSteps = [
   { step: 'AWARENESS', label: 'Nhận biết', desc: 'TikTok, YouTube Shorts, Facebook Reels, Website Smart Hub', color: '#3B82F6' },
   { step: 'INTEREST',  label: 'Quan tâm',  desc: 'Video hậu trường live mộc, challenge duet, clip NSND Tự Long', color: '#8B5CF6' },
   { step: 'DESIRE',    label: 'Khao khát', desc: 'Workshop "Chiếu chèo mở", nội dung giải nghĩa chèo cổ', color: '#EF4444' },
-  { step: 'ACTION',    label: 'Hành động', desc: 'Đặt vé online, mua vé workshop, chatbot AI hỗ trợ 24/7', color: '#10B981' },
+  { step: 'ACTION',    label: 'Hành động', desc: 'Mua vé workshop, chatbot AI hỗ trợ 24/7', color: '#10B981' },
   { step: 'ADVOCACY',  label: 'Lan tỏa',   desc: 'Check-in, tag bạn bè, đại sứ sinh viên tạo UGC tự nhiên', color: '#d0d09d' },
 ]
 
@@ -71,7 +71,7 @@ export default function OmnichannelStrategy() {
   const strat = strategies.find(s => s.id === active)
 
   return (
-    <section id="part4" className="py-28 px-6 relative">
+    <section id="part4" className="py-20 px-6 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#1a2b23]/50 to-transparent pointer-events-none" />
       <div className="max-w-7xl mx-auto relative">
 

@@ -58,7 +58,7 @@ const milestones = [
 
 export default function TheaterStats() {
   return (
-    <section id="stats" className="py-28 px-6 relative">
+    <section id="stats" className="py-20 px-6 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0f0c]/50 to-transparent pointer-events-none" />
       <div className="max-w-7xl mx-auto relative">
 

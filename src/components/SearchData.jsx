@@ -1,7 +1,8 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, LabelList } from 'recharts'
 import { TrendingUp, TrendingDown, Minus, Rocket, Search, Music, Mic } from 'lucide-react'
-import { SectionHeader, Reveal, GlassCard, stagger, scaleIn } from './ui'
+import { SectionHeader, Reveal, scaleIn } from './ui'
 
 const keywords = [
   { kw: 'hát chèo',                vol: 50000, yoy: 0,    trend: 'stable' },
@@ -78,13 +79,6 @@ const musicGenres = [
   { genre: 'Khác',                   pct: 3.8,  color: '#52525B' },
 ]
 
-const compareTheaters = [
-  { name: 'Nhà hát Tuổi Trẻ',   fans: 450000, pct: 100, color: '#EF4444', note: 'Dẫn đầu sân khấu kịch Việt Nam' },
-  { name: 'Kịch Việt Nam',       fans: 55000,  pct: 12,  color: '#3B82F6', note: 'Đơn vị nghệ thuật quốc gia' },
-  { name: 'Chèo Việt Nam',       fans: 32000,  pct: 7,   color: '#10B981', note: 'Nhà hát chèo lớn nhất VN' },
-  { name: 'NHCQD ★',             fans: 12000,  pct: 2.7, color: '#d0d09d', note: 'Tiềm năng tăng trưởng rất lớn' },
-]
-
 const TrendIcon = ({ trend }) => {
   if (trend === 'explosive') return <Rocket size={12} className="text-emerald-400" />
   if (trend === 'up')        return <TrendingUp size={12} className="text-blue-400" />
@@ -112,8 +106,11 @@ const insights = [
 ]
 
 export default function SearchData() {
+  const [showAllKeywords, setShowAllKeywords] = useState(false)
+  const visibleKeywords = showAllKeywords ? keywords : keywords.slice(0, 4)
+
   return (
-    <section id="search" className="py-28 px-6 relative">
+    <section id="search" className="pt-20 pb-8 px-6 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#1a2b23]/50 to-transparent pointer-events-none" />
       <div className="max-w-7xl mx-auto relative">
         <SectionHeader
@@ -275,10 +272,19 @@ export default function SearchData() {
         {/* Full table */}
         <Reveal>
           <div className="glass rounded-2xl overflow-hidden">
-            <div className="px-6 py-4 border-b border-white/5 flex items-center gap-2">
-              <Search size={16} style={{ color: '#d0d09d' }} />
-              <h3 className="text-white font-bold">Bảng dữ liệu đầy đủ — Google Keyword Stats</h3>
-              <span className="ml-2 text-xs text-zinc-500">Dữ liệu tìm kiếm về từ khóa "chèo" trên Google trong thời gian Nguồn: 01/03/2025 – 28/02/2026</span>
+            <div className="px-6 py-4 border-b border-white/5 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+              <div className="flex flex-wrap items-center gap-2">
+                <Search size={16} style={{ color: '#d0d09d' }} />
+                <h3 className="text-white font-bold">Bảng dữ liệu đầy đủ — Google Keyword Stats</h3>
+                <span className="text-xs text-zinc-500">Dữ liệu tìm kiếm về từ khóa "chèo" trên Google trong thời gian Nguồn: 01/03/2025 – 28/02/2026</span>
+              </div>
+              <button
+                type="button"
+                onClick={() => setShowAllKeywords(v => !v)}
+                className="shrink-0 rounded-lg border border-[#d0d09d]/25 bg-[#d0d09d]/10 px-4 py-2 text-xs font-bold text-[#d0d09d] transition-all hover:bg-[#d0d09d]/18"
+              >
+                {showAllKeywords ? 'Thu gọn' : 'Xem tất cả'}
+              </button>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
@@ -290,7 +296,7 @@ export default function SearchData() {
                   </tr>
                 </thead>
                 <tbody>
-                  {keywords.map((k, i) => (
+                  {visibleKeywords.map((k, i) => (
                     <motion.tr
                       key={k.kw}
                       initial={{ opacity: 0, x: -10 }}

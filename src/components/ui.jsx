@@ -31,7 +31,7 @@ export function Reveal({ children, className = '', delay = 0, variants = fadeUp 
 }
 
 /** Section header with animated accent line */
-export function SectionHeader({ eyebrow, title, subtitle }) {
+export function SectionHeader({ eyebrow, title, subtitle, subtitleClassName = '' }) {
   return (
     <Reveal className="text-center mb-16">
       <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase mb-5">
@@ -52,7 +52,7 @@ export function SectionHeader({ eyebrow, title, subtitle }) {
         />
       </div>
       <h2 className="text-4xl md:text-5xl font-black text-white mb-4 tracking-tight">{title}</h2>
-      {subtitle && <p className="text-zinc-400 max-w-2xl mx-auto text-lg leading-relaxed">{subtitle}</p>}
+      {subtitle && <p className={`text-zinc-400 max-w-2xl mx-auto text-lg leading-relaxed ${subtitleClassName}`}>{subtitle}</p>}
     </Reveal>
   )
 }
