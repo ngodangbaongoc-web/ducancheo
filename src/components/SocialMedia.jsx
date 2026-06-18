@@ -48,7 +48,7 @@ export default function SocialMedia() {
         <SectionHeader
           eyebrow="Mạng xã hội"
           title="Phân Tích Tương Tác Facebook"
-          subtitle="Dữ liệu thực từ fanpage MUCA & MSO 2026 — bài học chiến lược nội dung số cho Nhà hát Chèo Quân đội."
+          subtitle="Dữ liệu thực từ fanpage Đại học Văn hóa Nghệ thuật Quân đội - fanpage duy nhất đang tải thông tin chính thống của Nhà hát Chèo Quân đội hiện tại."
         />
 
         {/* Bar chart */}
@@ -141,10 +141,9 @@ export default function SocialMedia() {
                 <h4 className="font-bold text-base" style={{ color: '#d0d09d' }}>Hiệu ứng NSND Vũ Tự Long</h4>
               </div>
               <p className="text-zinc-400 text-sm leading-relaxed">
-                Từ sân khấu chèo đến gameshow{' '}
-                <strong className="text-white">"Anh trai vượt ngàn chông gai"</strong>,
-                thương hiệu cá nhân của Giám đốc Nhà hát là đòn bẩy truyền thông vô song —
-                kéo gần Gen Z với chiếu chèo truyền thống.
+                Từ hào quang vị thế sẵn có trong suốt 2 thập kỷ đối với khán giả truyền thống cùng khán giả trẻ qua show{' '}
+                <strong className="text-white">"Anh trai vượt ngàn chông gai"</strong>.
+                Thương hiệu cá nhân của Giám đốc Nhà hát là đòn bẩy truyền thông giúp kéo gần Gen Z với chiếu chèo truyền thống.
               </p>
             </div>
           </Reveal>
@@ -159,21 +158,19 @@ export default function SocialMedia() {
             </div>
             <div className="p-7 grid md:grid-cols-2 gap-6">
               <p className="text-zinc-300 leading-relaxed text-sm">
-                Dữ liệu không nói dối: nhu cầu khán giả cho nghệ thuật chèo vẫn rất lớn
-                (<strong className="text-white">50.000 lượt tìm kiếm/tháng</strong>), nhưng phần lớn
-                tập trung vào nhu cầu số hóa — karaoke, mp3, video ngắn —{' '}
-                những thứ Nhà hát hiện chưa cung cấp được. Fanbase Facebook còn rất nhỏ so với
-                các đơn vị cùng ngành, chỉ bằng 2,7% Nhà hát Tuổi Trẻ.
+                Theo dữ liệu thống kê, nhu cầu của khán giả đối với nghệ thuật chèo hiện duy trì ở mức tương đối cao với khoảng{' '}
+                <strong className="text-white">50.000 lượt tìm kiếm mỗi tháng</strong>.
+                Tuy nhiên, phần lớn lượng quan tâm này tập trung vào các nội dung số hóa như karaoke, định dạng mp3 và video ngắn — những sản phẩm hiện chưa được Nhà hát cung cấp.
+                Bên cạnh đó, quy mô cộng đồng người theo dõi trên nền tảng Facebook của đơn vị còn hạn chế, hiện chỉ tương đương <strong className="text-white">2,7%</strong> so với Nhà hát Tuổi Trẻ.
               </p>
               <div className="border-l border-white/5 pl-6">
                 <div className="text-zinc-500 text-xs uppercase tracking-wider mb-2 font-medium">Insight chiến lược</div>
                 <p className="text-white font-semibold leading-relaxed text-sm">
-                  Nhà hát không thiếu khán giả — Nhà hát đang thiếu kênh và định dạng nội dung
-                  phù hợp. Đây là cơ hội tăng trưởng lớn, không phải khủng hoảng không thể vãn hồi.
+                  Thực tế cho thấy nhu cầu của công chúng đối với nghệ thuật chèo vẫn hiện hữu; vấn đề nằm ở sự thiếu hụt các kênh tiếp cận và định dạng nội dung phù hợp với xu hướng hiện nay. Tình thế này mở ra cơ hội tăng trưởng và mở rộng tệp khán giả thông qua việc tối ưu hóa kênh truyền thông, thay vì phản ánh một cuộc khủng hoảng suy thoái không thể chuyển biến.
                 </p>
                 <div className="mt-4 flex items-center gap-2 text-blue-400 text-sm font-semibold">
                   <ArrowRight size={14} />
-                  <span>Phần 3: Định hướng chiến lược từ insight này</span>
+                  <span>Phần 3: Định hướng chiến lược</span>
                 </div>
               </div>
             </div>

@@ -6,11 +6,13 @@ import { SectionHeader, Reveal } from './ui'
 const strategies = [
   {
     id: 'swot', num: '01', Icon: Target, color: '#3B82F6', border: 'border-blue-500/20', bg: 'from-blue-950/30',
-    title: 'SWOT & Chiến lược Chuyển đổi', sub: 'Từ "bao cấp/hành chính" sang "Digital-first"',
-    desc: 'Từ những điểm mạnh và hạn chế hiện tại, Nhà hát cần chuyển dịch tư duy từ "bao cấp/hành chính" sang "Digital-first" (Ưu tiên số hóa).',
+    title: 'SWOT & Chiến lược Chuyển đổi', sub: 'Chuyển dịch tư duy quản trị: Từ cơ chế hành chính sang ưu tiên nền tảng số',
+    desc: 'Trên cơ sở phân tích hệ thống các thế mạnh và hạn chế nội tại, định hướng phát triển của Nhà hát đòi hỏi một sự chuyển dịch căn bản về tư duy quản trị: chuyển từ mô hình vận hành mang tính hành chính, thụ động sang chiến lược "Digital-first" (Ưu tiên số hóa). Sự thay đổi này cấu thành nền tảng cốt lõi để đổi mới phương thức tiếp cận công chúng và tối ưu hóa hiệu quả hoạt động trong bối cảnh mới.',
     actions: [
       { Icon: Shield, title: 'Điểm mạnh (Strengths)', detail: 'Lực lượng nghệ sĩ tinh hoa (9 NSND, 27 NSƯT). Danh tiếng của Giám đốc — Đại tá, NSND Vũ Tự Long. Quy mô lớn và vị thế chính trị vững chắc.' },
       { Icon: AlertTriangle, title: 'Điểm yếu (Weaknesses)', detail: 'Phụ thuộc kênh truyền thông một chiều. Thiếu thư viện nội dung số. Quy trình bán vé thủ công. Thiếu không gian tương tác với khán giả trẻ.' },
+      { Icon: Sparkles, title: 'Cơ hội (Opportunities)', detail: 'Lượng tìm kiếm "chèo" duy trì hơn 50.000 lượt/tháng — nhu cầu công chúng còn đó nhưng chưa được đáp ứng. Sự xuất hiện của NSND Vũ Tự Long trong "Anh trai vượt ngàn chông gai" mở ra cơ hội tiếp cận Gen Z quy mô lớn. Làn sóng phục hưng văn hóa truyền thống đang nổi lên trong giới trẻ.' },
+      { Icon: Zap, title: 'Thách thức (Threats)', detail: 'Cạnh tranh từ giải trí hiện đại: streaming, K-pop, gaming chiếm đa số thời gian rảnh của giới trẻ. Cơ sở khán giả truyền thống già hóa trong khi chưa có chiến lược thu hút thế hệ kế tiếp. Áp lực tự chủ tài chính hạn chế ngân sách đầu tư nội dung số.' },
     ],
     kpis: ['Số hóa hệ sinh thái nội dung', 'Trẻ hóa đề tài đại chúng', 'Cá nhân hóa trải nghiệm O2O'],
   },
@@ -103,7 +105,7 @@ export default function OmnichannelStrategy() {
             >
               <s.Icon size={15} />
               <span className="font-black text-xs opacity-70">{s.num}</span>
-              <span className="hidden sm:inline text-xs">{s.title.split(' ').slice(0, 3).join(' ')}</span>
+              <span className="hidden sm:inline text-xs">{s.title}</span>
             </button>
           ))}
         </Reveal>

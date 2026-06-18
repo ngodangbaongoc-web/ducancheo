@@ -22,17 +22,17 @@ const pillars = [
 
 const phases = [
   {
-    phase: 'Giai đoạn 1', period: 'Q1–Q2 · 2025', label: 'Nền Tảng', tagline: 'Chuyển đổi số căn bản',
+    phase: 'Giai đoạn 1', period: 'Q3–Q4 · 2026', label: 'Nền Tảng', tagline: 'Chuyển đổi số với website là trung tâm',
     color: '#EF4444',
     actions: [
-      'Ra mắt kênh TikTok & YouTube Shorts chính thức',
+      'Tạo trang website chính thức',
+      'Ra mắt kênh Fanpage & TikTok & YouTube chính thức',
       'Ghi âm & phát hành album mp3/backing track chèo cổ',
-      'Nâng cấp website tích hợp đặt vé online & chatbot AI',
-      'Sản xuất 20+ micro-content/tháng hậu trường nghệ sĩ',
+      'Duy trì hệ thống content chăm sóc các nền tảng',
     ],
   },
   {
-    phase: 'Giai đoạn 2', period: 'Q3–Q4 · 2025', label: 'Tăng Tốc', tagline: 'Xây dựng hệ sinh thái',
+    phase: 'Giai đoạn 2', period: 'Q1–Q2 · 2027', label: 'Phát Triển', tagline: 'Phát triển hệ sinh thái',
     color: '#d0d09d',
     actions: [
       'Triển khai mô hình O2O với TicketGO / Ticketbox',
@@ -42,13 +42,12 @@ const phases = [
     ],
   },
   {
-    phase: 'Giai đoạn 3', period: '2026 & sau', label: 'Bền Vững', tagline: 'Mở rộng & Củng cố',
+    phase: 'Giai đoạn 3', period: '2027 & sau', label: 'Bền Vững', tagline: 'Mở rộng & Củng cố',
     color: '#10B981',
     actions: [
       'Hệ sinh thái số hoàn chỉnh & tự vận hành',
       'Mạng lưới đại sứ thương hiệu toàn quốc',
       'Dẫn đầu xu hướng số hóa nghệ thuật truyền thống VN',
-      'Tự chủ tài chính qua doanh thu số & dịch vụ B2B',
     ],
   },
 ]
@@ -67,8 +66,8 @@ export default function StrategicDirection() {
 
         <SectionHeader
           eyebrow="Định hướng chiến lược"
-          title="Kim Chỉ Nam & Phân Kỳ Mục Tiêu"
-          subtitle="Chiến lược được xây dựng trực tiếp từ thách thức nội tại (Phần 1) và insight khán giả (Phần 2) — không phải lý thuyết chung chung."
+          title="Định Hướng Chiến Lược Và Lộ Trình Mục Tiêu"
+          subtitle="Chiến lược này được xây dựng dựa trên cơ sở phân tích thực trạng thách thức nội tại (Phần 1) và số liệu nghiên cứu phân khúc khán giả (Phần 2), nhằm đảm bảo tính thực tiễn và khả năng ứng dụng cao cho đơn vị: Phác thảo ma trận SWOT dựa trên các phân tích trên; Xây dựng khung lộ trình phân kỳ mục tiêu 3 giai đoạn; Đề xuất các chỉ số đo lường hiệu suất KPI phù hợp."
         />
 
         {/* 3.1 North Star */}
@@ -80,17 +79,16 @@ export default function StrategicDirection() {
                 <Target size={12} /> 3.1 — Mục tiêu chiến lược
               </div>
               <h3 className="text-2xl md:text-3xl font-black text-white mb-3">
-                "Đánh chắc tiến chắc — Digital-first"
+                Phương châm chiến lược: "Phát triển bền vững — Ưu tiên nền tảng số"
               </h3>
               <p className="text-zinc-300 max-w-2xl mx-auto leading-relaxed mb-6">
-                Không theo đuổi "quick wins" nhỏ lẻ mà xây dựng{' '}
-                <strong className="text-white">hệ sinh thái số bền vững</strong> —
-                biến tài nguyên nghệ thuật thành nội dung số dễ tiếp cận,
-                đưa khán giả từ mạng xã hội vào rạp hát theo mô hình O2O.
+                Chiến lược định hướng hạn chế các giải pháp ngắn hạn mang tính cục bộ, tập trung vào mục tiêu xây dựng{' '}
+                <strong className="text-white">hệ sinh thái số bền vững</strong>. Lộ trình này hướng tới việc chuyển hóa tài nguyên nghệ thuật truyền thống thành các định dạng nội dung số tối ưu khả năng tiếp cận, đồng thời ứng dụng mô hình{' '}
+                <strong className="text-white">O2O (Online-to-Offline)</strong> để chuyển đổi hiệu quả lượng tương tác trực tuyến thành khán giả trực tiếp tại rạp.
               </p>
               <div className="inline-flex items-center gap-2 text-sm text-zinc-400 border border-white/8 rounded-full px-4 py-2">
                 <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                Giải quyết đồng thời: kênh lỗi thời (Phần 1) + nhu cầu số hóa chưa được đáp ứng (Phần 2)
+                Giải pháp này nhằm giải quyết đồng thời: sự lạc hậu của các kênh truyền thông hiện tại (Phần 1) và khoảng trống đáp ứng nhu cầu số hóa của công chúng (Phần 2)
               </div>
             </div>
           </div>
@@ -128,7 +126,7 @@ export default function StrategicDirection() {
           <div className="glass rounded-2xl p-8">
             <div className="flex items-center gap-2 mb-8">
               <Clock size={16} style={{ color: '#d0d09d' }} />
-              <h3 className="text-white font-bold text-lg">3.2 — Phân Kỳ Mục Tiêu</h3>
+              <h3 className="text-white font-bold text-lg">3.2 — Lộ trình mục tiêu</h3>
               <span className="text-zinc-600 text-sm ml-1">Lộ trình 3 giai đoạn</span>
             </div>
             <div className="grid md:grid-cols-3 gap-4">
@@ -172,16 +170,12 @@ export default function StrategicDirection() {
             </div>
             <div className="p-7 grid md:grid-cols-2 gap-6">
               <p className="text-zinc-300 leading-relaxed text-sm">
-                Chiến lược "Đánh chắc tiến chắc — Digital-first" được thiết kế để trả lời trực tiếp cho{' '}
-                <strong className="text-white">thách thức kênh lỗi thời & tài chính</strong> (Phần 1) và{' '}
-                <strong className="text-white">nhu cầu số hóa chưa được đáp ứng</strong> (Phần 2).
-                Lộ trình 3 giai đoạn đảm bảo không bước đi nào bị bỏ qua.
+                Chiến lược "Ưu tiên nền tảng số" được cấu trúc nhằm giải quyết trực tiếp các hạn chế về kênh truyền thông, áp lực tối ưu hóa nguồn lực tài chính (đã được phân tích tại Phần 1), đồng thời đáp ứng các khoảng trống về nhu cầu số hóa của công chúng (được xác định tại Phần 2). Để đảm bảo tính khả thi và kiểm soát rủi ro trong quá trình thực thi, chiến lược được phân kỳ theo lộ trình 3 giai đoạn mang tính kế thừa và tiệm tiến.
               </p>
               <div className="border-l border-white/5 pl-6">
                 <div className="text-zinc-500 text-xs uppercase tracking-wider mb-2 font-medium">Dẫn sang Phần 4</div>
                 <p className="text-white font-semibold leading-relaxed text-sm">
-                  Với định hướng rõ ràng, câu hỏi tiếp theo là: dùng công cụ nào,
-                  triển khai thế nào để hiện thực hóa từng giai đoạn?
+                  Trên cơ sở xác định rõ ràng định hướng chiến lược và các mục tiêu phân kỳ, vấn đề cốt lõi tiếp theo cần được giải quyết là hệ thống hóa các công cụ thực thi, đồng thời xây dựng quy trình triển khai cụ thể nhằm hiện thực hóa mục tiêu đề ra cho từng giai đoạn. Các nội dung này sẽ được phân tích và luận giải chi tiết trong Phần 4 dưới đây.
                 </p>
                 <div className="mt-4 flex items-center gap-2 text-violet-400 text-sm font-semibold">
                   <ArrowRight size={14} />

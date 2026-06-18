@@ -165,7 +165,7 @@ export default function Context() {
                 <p className="text-zinc-400 text-sm leading-relaxed">
                   Trong kỷ nguyên số hóa, thách thức không nằm ở khán giả hết yêu nghệ thuật truyền thống
                   mà là <strong className="text-white">"sự mới"</strong> trong cách tiếp cận.
-                  Bối cảnh này đặt ra rằng: Đơn vị nào số hóa trước, đơn vị đó giành ưu thế.
+                  Bối cảnh này đặt ra rằng: <strong className="text-white">Đơn vị nào số hóa trước, đơn vị đó giành ưu thế.</strong>
                 </p>
               </div>
             </div>

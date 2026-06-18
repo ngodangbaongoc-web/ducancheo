@@ -272,30 +272,6 @@ export default function SearchData() {
           </Reveal>
         </div>
 
-        {/* Insight cards */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-60px' }}
-          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
-          className="grid md:grid-cols-3 gap-4 mb-8"
-        >
-          {insights.map(item => (
-            <motion.div
-              key={item.title}
-              variants={scaleIn}
-              whileHover={{ y: -4 }}
-              className={`rounded-2xl p-6 bg-gradient-to-br ${item.bg} to-transparent border ${item.border} transition-all`}
-            >
-              <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-4`} style={{ background: item.color.replace('text-', '') + '20' }}>
-                <item.icon size={20} className={item.color} />
-              </div>
-              <div className={`font-bold text-base mb-2 ${item.color}`}>{item.title}</div>
-              <p className="text-zinc-400 text-sm leading-relaxed">{item.text}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-
         {/* Full table */}
         <Reveal>
           <div className="glass rounded-2xl overflow-hidden">
@@ -349,6 +325,30 @@ export default function SearchData() {
             </div>
           </div>
         </Reveal>
+
+        {/* Insight cards */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-60px' }}
+          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
+          className="grid md:grid-cols-3 gap-4 mt-8"
+        >
+          {insights.map(item => (
+            <motion.div
+              key={item.title}
+              variants={scaleIn}
+              whileHover={{ y: -4 }}
+              className={`rounded-2xl p-6 bg-gradient-to-br ${item.bg} to-transparent border ${item.border} transition-all`}
+            >
+              <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-4`} style={{ background: item.color.replace('text-', '') + '20' }}>
+                <item.icon size={20} className={item.color} />
+              </div>
+              <div className={`font-bold text-base mb-2 ${item.color}`}>{item.title}</div>
+              <p className="text-zinc-400 text-sm leading-relaxed">{item.text}</p>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   )
